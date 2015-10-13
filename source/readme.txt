@@ -1,1 +1,1 @@
-This is where our source code will go.  Open this folder as the project root in intelliJ to edit it.
+This is where our source code will go.
