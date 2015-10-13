@@ -32,7 +32,7 @@ public class User
 
     public void setUserName(String name)
     {
-        userName = name;
+        this.userName = name;
     }
 
     public String getUserName()
@@ -42,7 +42,7 @@ public class User
 
     public void setPassword(String pw)
     {
-        password = pw;
+        this.password = pw;
     }
 
     public Boolean confirmPassword(String s)
@@ -52,7 +52,7 @@ public class User
 
     public void setEmail(String email)
     {
-        emailAddress = email;
+        this.emailAddress = email;
     }
 
     public String getEmail()
@@ -64,7 +64,7 @@ public class User
     {
         try
         {
-            Courses.add(course);
+            this.Courses.add(course);
             return true;
         }
         catch(ArrayStoreException e)
@@ -77,7 +77,7 @@ public class User
     {
         try
         {
-            Courses.remove(course);
+            this.Courses.remove(course);
             return true;
         }
         catch(ArrayStoreException e)
