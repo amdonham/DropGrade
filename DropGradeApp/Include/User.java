@@ -1,5 +1,6 @@
 import java.security.PublicKey;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -26,18 +27,67 @@ public class User
     public
         User()
         {
-            Courses = new ArrayList<Course>();
+            Courses = new ArrayList<>();
         }
 
-    public Boolean addCourse(Course course) {
-        try {
+    public void setUserName(String name)
+    {
+        userName = name;
+    }
+
+    public String getUserName()
+    {
+        return userName;
+    }
+
+    public void setPassword(String pw)
+    {
+        password = pw;
+    }
+
+    public Boolean confirmPassword(String s)
+    {
+        return password.equals(s);
+    }
+
+    public void setEmail(String email)
+    {
+        emailAddress = email;
+    }
+
+    public String getEmail()
+    {
+        return emailAddress;
+    }
+
+    public Boolean addCourse(Course course)
+    {
+        try
+        {
             Courses.add(course);
             return true;
-            }
+        }
         catch(ArrayStoreException e)
         {
             return false;
         }
     }
 
+    public Boolean deleteCourse(Course course)
+    {
+        try
+        {
+            Courses.remove(course);
+            return true;
+        }
+        catch(ArrayStoreException e)
+        {
+            return false;
+        }
+    }
+
+    public List<Course> getCourses()
+    {
+        return Courses;
+    }
 }
