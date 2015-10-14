@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -16,9 +18,8 @@ public class Course {
     	String professorLName;
         Integer courseAverage;
         List<Weight> weights;
-        List<Grade> grades;
 
-    public Course(){}
+    public Course(){weights = new ArrayList<Weight>();}
 
     public String getCourseName() {
         return courseName;
@@ -56,11 +57,26 @@ public class Course {
         return weights;
     }
 
-    public List<Grade> getGrades() {
-        return grades;
+    public void addWeight(String type, Float weight)
+    {
+        weights.add(new Weight(weight,type));
     }
 
-    /**add get weight and grade*/
+    public void addGrade(String type, Float grade)
+    {
+        for(int i = 0; i < weights.size();i++)
+        {
+            if(weights.get(i).getName().equals(type))
+            {
+                weights.get(i).addGrade(grade);
+            }
+        }
+    }
 
+
+
+    public void getGrades() {
+        /**fix this */
+    }
 
 }

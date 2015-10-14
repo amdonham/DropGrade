@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created by Alan on 10/13/2015.
  */
@@ -7,10 +9,11 @@ public class Weight {
     private
         Float weight;
         String Name;
+        List<Grade> grades;
 
-    public void Weight(){}
+    public Weight(){}
 
-    public void Weight(Float w, String n){this.weight = w; this.Name = n;}
+    public Weight(Float w, String n){this.weight = w; this.Name = n;}
 
     public void setName(String name) {
         this.Name = name;
@@ -26,5 +29,10 @@ public class Weight {
 
     public String getName() {
         return Name;
+    }
+
+    public void addGrade(Float grade)
+    {
+        grades.add(grade);
     }
 }

@@ -24,11 +24,7 @@ public class User
 
     /**Methods**/
 
-    public
-        User()
-        {
-            Courses = new ArrayList<>();
-        }
+    public User() {Courses = new ArrayList<>();}
 
     public void setUserName(String name)
     {
