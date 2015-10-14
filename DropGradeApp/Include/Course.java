@@ -73,6 +73,18 @@ public class Course {
         }
     }
 
+    public List<Grade> getGrades(String type)
+    {
+        for(int i = 0; i < weights.size(); i++)
+        {
+            if(weights.get(i).getName().equals(type))
+            {
+                return weights.get(i).getGrades();
+            }
+        }
+        return new ArrayList<Grade>();
+    }
+
 
 
     public void getGrades() {

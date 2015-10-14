@@ -24,7 +24,7 @@ public class User
 
     /**Methods**/
 
-    public User() {Courses = new ArrayList<>();}
+    public User(String name, String pass, String email) {this.userName = name; this.password = pass; this.emailAddress = email; Courses = new ArrayList<>();}
 
     public void setUserName(String name)
     {

@@ -31,8 +31,13 @@ public class Weight {
         return Name;
     }
 
-    public void addGrade(Float grade)
+    public void addGrade(Float g)
     {
-        grades.add(grade);
+        grades.add(new Grade(g,Name));
+    }
+
+    public List<Grade> getGrades()
+    {
+        return grades;
     }
 }
