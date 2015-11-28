@@ -5,23 +5,85 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="21" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:hardwareAccelerated="false"
+		android:largeHeap="true" 
+        android:icon="@drawable/app_icon"
+ 		android:label = "@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".LoginActivity"
+             android:label = "@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name= ".MainMenuActivity"
+             android:label = "@string/home">
+            
+        </activity>
+        
+        <activity
+            android:name= ".NewUserActivity">
+           
+            
+        </activity>
+        
+        
+ 
+       <activity
+            android:name =".CourseWorkActivity"></activity>
+            
+          <activity
+            android:name =".CourseActivity"></activity>
+          
+          
+        
+        <activity
+            android:name= ".GradeActivity"
+            android:label = "@string/gradeacti">
+        </activity>
+        
+        
+        <activity
+            android:name= ".SearchCourseActivity"
+            android:label = "@string/searchC"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        
+        <activity
+            android:name= ".SearchProfessorActivity"
+            android:windowSoftInputMode="stateHidden">
+            
+        </activity>
+        
+        <activity
+            android:name= ".ReviewActivity">
+            
+        </activity>
+        
+      
+        
+        <activity
+            android:name= ".GradeCalculatorActivity">
+            
+        </activity>
+        
+        
+        
+       
+      
     </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />   
 
 </manifest>

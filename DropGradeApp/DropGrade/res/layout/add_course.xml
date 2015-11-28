@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android='http://schemas.android.com/apk/res/android'
+    android:layout_width='fill_parent'
+    android:layout_height='fill_parent'
+    android:orientation='vertical'
+    android:padding='10sp' >
+    
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#999"/>
+    
+    <EditText
+        android:id='@+id/txt_name'
+        android:layout_width='fill_parent'
+        android:layout_height='wrap_content'
+        android:hint='Course Name'
+        android:singleLine='true' >
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id='@+id/coursenum'
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Course Number' >
+    </EditText>
+    
+    <EditText
+        android:id='@+id/coursesub'
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Course Subject' >
+    </EditText>
+
+    <EditText
+        android:id='@+id/professsor'
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Professor' >
+    </EditText>
+    
+     <EditText
+        android:id='@+id/semester'
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Semester' >
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content' >
+
+        <Button
+            android:id='@+id/btn_login2'
+            android:layout_width='120dp'
+            android:layout_height='wrap_content'
+            android:text='Submit' />
+
+        <Button
+            android:id='@+id/btn_cancel2'
+            android:layout_width='120dp'
+            android:layout_height='wrap_content'
+            android:layout_alignParentTop='true'
+            android:layout_marginLeft='10dp'
+            android:layout_toRightOf='@+id/btn_login2'
+            android:text='Cancel' />
+    </RelativeLayout>
+
+</LinearLayout>

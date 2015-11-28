@@ -1,0 +1,100 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall"
+    android:gravity ="center"
+    tools:context=".MainMenuActivity" 
+    >
+
+
+       	<LinearLayout
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:layout_below="@+id/imageView1"
+       	    android:layout_centerHorizontal="true"
+       	    android:layout_marginTop="29dp"
+       	    android:background="@drawable/linearlayout_bg"
+       	    android:orientation="vertical"
+       	    
+       	    android:padding="10dp" >
+
+       	    <Button
+       	        android:id="@+id/scheduleb"
+       	        style="@style/ButtonText"
+       	        android:layout_width="match_parent"
+       	        android:layout_height="wrap_content"
+       	        android:background="@drawable/layers_schedule"
+       	        android:onClick="buttonOnClick"
+       	        android:paddingBottom="10dp"
+       	        android:paddingLeft="40dp"
+       	        android:paddingRight="10dp"
+       	        android:paddingTop="10dp"
+       	        android:text="Manage Schedule" />
+
+       	    <Button
+       	        android:id="@+id/searchcb"
+       	        style="@style/ButtonText"
+       	        android:layout_width="match_parent"
+       	        android:layout_height="wrap_content"
+       	        android:background="@drawable/layers_searchc"
+       	        android:onClick="buttonOnClick"
+       	        android:paddingBottom="10dp"
+       	        android:paddingLeft="30dp"
+       	        android:paddingRight="10dp"
+       	        android:paddingTop="10dp"
+       	        android:text="Search Courses" />
+
+       	    <Button
+       	        android:id="@+id/searchpb"
+       	        style="@style/ButtonText"
+       	        android:layout_width="match_parent"
+       	        android:layout_height="wrap_content"
+       	        android:background="@drawable/layers_searchp"
+       	        android:onClick="buttonOnClick"
+       	        android:paddingBottom="10dp"
+       	        android:paddingLeft="40dp"
+       	        android:paddingRight="10dp"
+       	        android:paddingTop="10dp"
+       	        android:text="Search Professors" />
+
+       	    <Button
+       	        android:id="@+id/reviewb"
+       	        style="@style/ButtonText"
+       	        android:layout_width="match_parent"
+       	        android:layout_height="wrap_content"
+       	        android:background="@drawable/layers_review"
+       	        android:onClick="buttonOnClick"
+       	        android:paddingBottom="10dp"
+       	        android:paddingLeft="30dp"
+       	        android:paddingRight="10dp"
+       	        android:paddingTop="10dp"
+       	        android:text="Review Course" />
+
+       	    <Button
+       	        android:id="@+id/whatifb"
+       	        style="@style/ButtonText"
+       	        android:layout_width="match_parent"
+       	        android:layout_height="wrap_content"
+       	        android:background="@drawable/layer_whatif"
+       	        android:onClick="buttonOnClick"
+       	        android:paddingBottom="10dp"
+       	        android:paddingLeft="30dp"
+       	        android:paddingRight="10dp"
+       	        android:paddingTop="10dp"
+       	        android:text="What if?" />
+       	</LinearLayout>
+
+<ImageView
+    android:id="@+id/imageView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    
+    android:gravity="center"
+    android:src="@drawable/mainmenu" />
+
+</RelativeLayout>

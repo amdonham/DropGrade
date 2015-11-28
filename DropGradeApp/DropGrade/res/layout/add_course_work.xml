@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android='http://schemas.android.com/apk/res/android'
+    android:layout_width='fill_parent'
+    android:layout_height='fill_parent'
+    android:orientation='vertical'
+    android:padding='10sp' >
+    
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#999"/>
+    
+    <EditText
+        android:id='@+id/txt_name'
+        android:layout_width='fill_parent'
+        android:layout_height='wrap_content'
+        android:hint='Assignment Name'
+        android:singleLine='true' >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView 
+        android:id="@+id/text2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#999"
+        android:text ="Category"/>
+        
+    <RadioGroup
+        android:id="@+id/radioCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioHomework"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homework" 
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Projects" />
+        
+        <RadioButton
+            android:id="@+id/radioMidterm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Midterm" />
+        
+        <RadioButton
+            android:id="@+id/radioFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Final" />
+        
+         <RadioButton
+            android:id="@+id/radioOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+    </RadioGroup>
+    
+    <EditText
+        android:id='@+id/assignmentgrade'
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Grade'
+        android:inputType="numberDecimal" >
+    </EditText>
+    
+    <EditText
+        android:id='@+id/assignmentweight'
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Assignment Weight'
+        android:inputType="numberDecimal"  >
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content' >
+
+        <Button
+            android:id='@+id/btn_login3'
+            android:layout_width='120dp'
+            android:layout_height='wrap_content'
+            android:text='Submit' />
+
+        <Button
+            android:id='@+id/btn_cancel3'
+            android:layout_width='120dp'
+            android:layout_height='wrap_content'
+            android:layout_alignParentTop='true'
+            android:layout_marginLeft='10dp'
+            android:layout_toRightOf='@+id/btn_login3'
+            android:text='Cancel' />
+    </RelativeLayout>
+
+</LinearLayout>

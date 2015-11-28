@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+     android:background="@drawable/wall" >
+     
+       <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:background="@drawable/grading_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        
+        >
+        
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background= "#3D1308">
+
+            <ImageView
+                android:id="@+id/imgImage"
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/scourses" />
+           
+        </LinearLayout>
+
+	</android.support.v7.widget.CardView>
+     
+    <!-- Editext for Search -->
+    <EditText android:id="@+id/inputSearch2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Courses..."
+        android:inputType="textVisiblePassword"
+        />
+  
+    <!-- List View -->
+    <ListView
+        android:id="@+id/list_view2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+  
+</LinearLayout>

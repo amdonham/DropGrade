@@ -19,6 +19,16 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040007;
         public static final int abc_slide_out_bottom=0x7f040008;
         public static final int abc_slide_out_top=0x7f040009;
+        public static final int design_fab_in=0x7f04000a;
+        public static final int design_fab_out=0x7f04000b;
+        public static final int design_snackbar_in=0x7f04000c;
+        public static final int design_snackbar_out=0x7f04000d;
+        public static final int slide_down=0x7f04000e;
+        public static final int slide_up=0x7f04000f;
+    }
+    public static final class array {
+        public static final int category_array=0x7f0c0001;
+        public static final int grade_array=0x7f0c0000;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -348,6 +358,28 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int barLength=0x7f0100bc;
+        /**  The amount that the scrolling view should overlap the bottom of any AppBarLayout 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behavior_overlapTop=0x7f0100fc;
+        /**  The width of the border around the FAB. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int borderWidth=0x7f0100d1;
         /**  Style for buttons without an explicit border, often used in groups. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -421,6 +453,67 @@ containing a value of this type.
 </table>
          */
         public static final int buttonTintMode=0x7f0100c0;
+        /**  Background color for CardView. 
+         <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cardBackgroundColor=0x7f010110;
+        /**  Corner radius for CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cardCornerRadius=0x7f010111;
+        /**  Elevation for CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cardElevation=0x7f010112;
+        /**  Maximum Elevation for CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cardMaxElevation=0x7f010113;
+        /**  Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cardPreventCornerOverlap=0x7f010115;
+        /**  Add padding in API v21+ as well to have the same measurements with previous versions. 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cardUseCompatPadding=0x7f010114;
         /**  Default Checkbox style. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -454,6 +547,32 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int collapseIcon=0x7f0100ad;
+        /**  Specifies how the title should be positioned when collapsed. 
+         <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0x30</td><td> Push title to the top of its container, not changing its size. </td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td> Push title to the bottom of its container, not changing its size. </td></tr>
+<tr><td><code>left</code></td><td>0x03</td><td> Push title to the left of its container, not changing its size. </td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td> Push title to the right of its container, not changing its size. </td></tr>
+<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place title in the vertical center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the title if needed so it completely fills its container. </td></tr>
+<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place title in the horizontal center of its container, not changing its size. </td></tr>
+<tr><td><code>center</code></td><td>0x11</td><td> Place the title in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
+<tr><td><code>start</code></td><td>0x00800003</td><td> Push title to the beginning of its container, not changing its size. </td></tr>
+<tr><td><code>end</code></td><td>0x00800005</td><td> Push title to the end of its container, not changing its size. </td></tr>
+</table>
+         */
+        public static final int collapsedTitleGravity=0x7f010107;
+        /**  The text appearance of the CollapsingToolbarLayouts title when it is fully
+             'collapsed' 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int collapsedTitleTextAppearance=0x7f010103;
         /**  The drawing color for the bars 
          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -600,11 +719,105 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int contentInsetStart=0x7f010081;
+        /**  Inner padding between the edges of the Card and children of the CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contentPadding=0x7f010116;
+        /**  Inner padding between the bottom edge of the Card and children of the CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contentPaddingBottom=0x7f01011a;
+        /**  Inner padding between the left edge of the Card and children of the CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contentPaddingLeft=0x7f010117;
+        /**  Inner padding between the right edge of the Card and children of the CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contentPaddingRight=0x7f010118;
+        /**  Inner padding between the top edge of the Card and children of the CardView. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contentPaddingTop=0x7f010119;
+        /**  The drawable to use as a scrim on top of the CollapsingToolbarLayouts content when
+             it has been scrolled sufficiently off screen. 
+         <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contentScrim=0x7f010104;
         /**  The background used by framework controls. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int controlBackground=0x7f01005b;
+        /**  Whether the layout is laid out as if the character counter will be displayed 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int counterEnabled=0x7f0100f3;
+        /**  The max length to display in the character counter 
+         <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int counterMaxLength=0x7f0100f4;
+        /**  TextAppearance of the character counter when the text is longer than the max 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int counterOverflowTextAppearance=0x7f0100f6;
+        /**  TextAppearance of the character counter 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int counterTextAppearance=0x7f0100f5;
         /**  Specifies a layout for custom navigation. Overrides navigationMode. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -738,6 +951,20 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int elevation=0x7f010085;
+        /**  Whether the layout is laid out as if an error will be displayed 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int errorEnabled=0x7f0100f1;
+        /**  TextAppearance of any error message displayed 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int errorTextAppearance=0x7f0100f2;
         /**  The drawable to show in the button for expanding the activities overflow popup.
              <strong>Note:</strong> Clients would like to set this drawable
              as a clue about the action the chosen activity will perform. For
@@ -748,6 +975,122 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int expandActivityOverflowButtonDrawable=0x7f0100a0;
+        /**  The initial expanded state for the AppBarLayout. This only takes effect when this
+             view is a direct child of a CoordinatorLayout. 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int expanded=0x7f0100f9;
+        /**  Specifies how the title should be positioned when expanded. 
+         <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0x30</td><td> Push title to the top of its container, not changing its size. </td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td> Push title to the bottom of its container, not changing its size. </td></tr>
+<tr><td><code>left</code></td><td>0x03</td><td> Push title to the left of its container, not changing its size. </td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td> Push title to the right of its container, not changing its size. </td></tr>
+<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place title in the vertical center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the title if needed so it completely fills its container. </td></tr>
+<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place title in the horizontal center of its container, not changing its size. </td></tr>
+<tr><td><code>center</code></td><td>0x11</td><td> Place the title in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
+<tr><td><code>start</code></td><td>0x00800003</td><td> Push title to the beginning of its container, not changing its size. </td></tr>
+<tr><td><code>end</code></td><td>0x00800005</td><td> Push title to the end of its container, not changing its size. </td></tr>
+</table>
+         */
+        public static final int expandedTitleGravity=0x7f010108;
+        /**   Specifies extra space on the start, top, end and bottom
+              sides of the the expanded title text. Margin values should be positive. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int expandedTitleMargin=0x7f0100fd;
+        /**   Specifies extra space on the bottom side of the the expanded title text.
+              Margin values should be positive. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int expandedTitleMarginBottom=0x7f010101;
+        /**   Specifies extra space on the end side of the the expanded title text.
+              Margin values should be positive. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int expandedTitleMarginEnd=0x7f010100;
+        /**   Specifies extra space on the start side of the the expanded title text.
+              Margin values should be positive. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int expandedTitleMarginStart=0x7f0100fe;
+        /**   Specifies extra space on the top side of the the expanded title text.
+              Margin values should be positive. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int expandedTitleMarginTop=0x7f0100ff;
+        /**  The text appearance of the CollapsingToolbarLayout's title when it is fully
+             'expanded' 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int expandedTitleTextAppearance=0x7f010102;
+        /**  Size for the FAB. 
+         <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int fabSize=0x7f0100cf;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int foregroundInsidePadding=0x7f0100d9;
         /**  The max gap between the bars when they are parallel to each other 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -764,6 +1107,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int goIcon=0x7f010097;
+        /**  Layout resource to inflate as the header 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int headerLayout=0x7f0100d8;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -783,6 +1131,19 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int hideOnContentScroll=0x7f010080;
+        /**  Whether to animate hint state changes. 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int hintAnimationEnabled=0x7f0100f7;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int hintTextAppearance=0x7f0100f0;
         /**  Specifies a drawable to use for the 'home as up' indicator. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -827,6 +1188,12 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int initialActivityCount=0x7f01009f;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int insetForeground=0x7f0100d2;
         /**  Specifies whether the theme is light, otherwise it is dark. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -836,6 +1203,19 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int isLightTheme=0x7f010002;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int itemBackground=0x7f0100d6;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemIconTint=0x7f0100d4;
         /**  Specifies padding that should be applied to the left and right sides of
              system-provided items in the bar. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -848,11 +1228,159 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int itemPadding=0x7f01007f;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int itemTextAppearance=0x7f0100d7;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemTextColor=0x7f0100d5;
+        /**  A reference to an array of integers representing the
+             locations of horizontal keylines in dp from the starting edge.
+             Child views can refer to these keylines for alignment using
+             layout_keyline="index" where index is a 0-based index into
+             this array. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int keylines=0x7f0100ea;
         /**  The layout to use for the search view. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int layout=0x7f010092;
+        /**  Class name of the Layout Manager to be used.
+        <p/>
+        The class must extend android.support.v7.widget.RecyclerView$LayoutManager
+        and have either a default constructor or constructor with the signature
+        (android.content.Context, android.util.AttributeSet, int, int).
+         <p/>
+         If the name starts with a '.', application package is prefixed.
+         Else, if the name contains a '.', the classname is assumed to be a full class name.
+         Else, the recycler view package name (android.support.v7.widget) is prefixed. 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layoutManager=0x7f01010c;
+        /**  The id of an anchor view that this view should position relative to. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int layout_anchor=0x7f0100ed;
+        /**  Specifies how an object should position relative to an anchor, on both the X and Y axes,
+             within its parent's bounds.  
+         <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0x30</td><td> Push object to the top of its container, not changing its size. </td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td> Push object to the bottom of its container, not changing its size. </td></tr>
+<tr><td><code>left</code></td><td>0x03</td><td> Push object to the left of its container, not changing its size. </td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td> Push object to the right of its container, not changing its size. </td></tr>
+<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place object in the vertical center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the object if needed so it completely fills its container. </td></tr>
+<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place object in the horizontal center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_horizontal</code></td><td>0x07</td><td> Grow the horizontal size of the object if needed so it completely fills its container. </td></tr>
+<tr><td><code>center</code></td><td>0x11</td><td> Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
+<tr><td><code>fill</code></td><td>0x77</td><td> Grow the horizontal and vertical size of the object if needed so it completely fills its container. </td></tr>
+<tr><td><code>clip_vertical</code></td><td>0x80</td><td> Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. </td></tr>
+<tr><td><code>clip_horizontal</code></td><td>0x08</td><td> Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. </td></tr>
+<tr><td><code>start</code></td><td>0x00800003</td><td> Push object to the beginning of its container, not changing its size. </td></tr>
+<tr><td><code>end</code></td><td>0x00800005</td><td> Push object to the end of its container, not changing its size. </td></tr>
+</table>
+         */
+        public static final int layout_anchorGravity=0x7f0100ef;
+        /**  The class name of a Behavior class defining special runtime behavior
+             for this child view. 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layout_behavior=0x7f0100ec;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td> The view will act as normal with no collapsing behavior. </td></tr>
+<tr><td><code>pin</code></td><td>1</td><td> The view will pin in place. </td></tr>
+<tr><td><code>parallax</code></td><td>2</td><td> The view will scroll in a parallax fashion. See the
+                 layout_collapseParallaxMultiplier attribute to change the multiplier. </td></tr>
+</table>
+         */
+        public static final int layout_collapseMode=0x7f01010a;
+        /**  The multiplier used when layout_collapseMode is set to 'parallax'. The value should
+             be between 0.0 and 1.0. 
+         <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layout_collapseParallaxMultiplier=0x7f01010b;
+        /**  The index of a keyline this view should position relative to.
+             android:layout_gravity will affect how the view aligns to the
+             specified keyline. 
+         <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layout_keyline=0x7f0100ee;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>scroll</code></td><td>0x1</td><td> The view will be scroll in direct relation to scroll events. This flag needs to be
+                 set for any of the other flags to take effect. If any sibling views
+                 before this one do not have this flag, then this value has no effect. </td></tr>
+<tr><td><code>exitUntilCollapsed</code></td><td>0x2</td><td> When exiting (scrolling off screen) the view will be scrolled until it is
+                 'collapsed'. The collapsed height is defined by the view's minimum height. </td></tr>
+<tr><td><code>enterAlways</code></td><td>0x4</td><td> When entering (scrolling on screen) the view will scroll on any downwards
+                 scroll event, regardless of whether the scrolling view is also scrolling. This
+                 is commonly referred to as the 'quick return' pattern. </td></tr>
+<tr><td><code>enterAlwaysCollapsed</code></td><td>0x8</td><td> An additional flag for 'enterAlways' which modifies the returning view to
+                 only initially scroll back to it's collapsed height. Once the scrolling view has
+                 reached the end of it's scroll range, the remainder of this view will be scrolled
+                 into view. </td></tr>
+<tr><td><code>snap</code></td><td>0x10</td><td> Upon a scroll ending, if the view is only partially visible then it will be
+                 snapped and scrolled to it's closest edge. </td></tr>
+</table>
+         */
+        public static final int layout_scrollFlags=0x7f0100fa;
+        /**  An interpolator to use when scrolling this View. Only takes effect when View
+             is scrollable. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int layout_scrollInterpolator=0x7f0100fb;
         /**  Drawable used as a background for selected list items. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -954,6 +1482,16 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int maxActionInlineWidth=0x7f0100f8;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int maxButtonHeight=0x7f0100ac;
         /**  When set to true, all children with a weight will be considered having
              the minimum size of the largest child. If false, all children are
@@ -966,6 +1504,11 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int measureWithLargestChild=0x7f0100a2;
+        /**  The menu resource to inflate and populate items from. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int menu=0x7f0100d3;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1076,6 +1619,17 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int preserveIconSpacing=0x7f01008d;
+        /**  TranslationZ value for the FAB when pressed
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pressedTranslationZ=0x7f0100d0;
         /**  Specifies the horizontal padding on either end for an embedded progress bar. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -1116,6 +1670,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int ratingBarStyle=0x7f01006b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int reverseLayout=0x7f01010e;
+        /**  Ripple color for the FAB. 
+         <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rippleColor=0x7f0100ce;
         /**  Search icon displayed as a text field hint 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -1199,6 +1771,14 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int singleChoiceItemLayout=0x7f0100cb;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int spanCount=0x7f01010d;
         /**  Whether bars should rotate or not during transition 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -1227,6 +1807,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int splitTrack=0x7f0100c6;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stackFromEnd=0x7f01010f;
         /**  State identifier indicating the popup will be above the anchor. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -1236,6 +1824,23 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int state_above_anchor=0x7f0100b4;
+        /**  Drawable to display behind the status bar when the view is set to draw behind it. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int statusBarBackground=0x7f0100eb;
+        /**  The drawable to use as a scrim for the status bar content when the
+             CollapsingToolbarLayout has been scrolled sufficiently off screen. Only works on
+             Lollipop with the correct setup. 
+         <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int statusBarScrim=0x7f010105;
         /**  Background for the section containing the action (e.g. voice search) 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -1306,6 +1911,156 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int switchTextAppearance=0x7f0100c3;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int tabBackground=0x7f0100dd;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabContentStart=0x7f0100dc;
+        /**  Standard gravity constant that a child supplies to its parent.
+             Defines how the child view should be positioned, on both the X and Y axes,
+             within its enclosing layout. 
+         <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fill</code></td><td>0</td><td></td></tr>
+<tr><td><code>center</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int tabGravity=0x7f0100df;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabIndicatorColor=0x7f0100da;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabIndicatorHeight=0x7f0100db;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabMaxWidth=0x7f0100e1;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabMinWidth=0x7f0100e0;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>scrollable</code></td><td>0</td><td></td></tr>
+<tr><td><code>fixed</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int tabMode=0x7f0100de;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabPadding=0x7f0100e9;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabPaddingBottom=0x7f0100e8;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabPaddingEnd=0x7f0100e7;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabPaddingStart=0x7f0100e5;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabPaddingTop=0x7f0100e6;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabSelectedTextColor=0x7f0100e4;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int tabTextAppearance=0x7f0100e2;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tabTextColor=0x7f0100e3;
         /**  Present the text in ALL CAPS. This may use a small-caps form when available. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -1391,6 +2146,15 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int title=0x7f010000;
+        /**  Whether the CollapsingToolbarLayout should draw its own shrinking/growing title. 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int titleEnabled=0x7f010109;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1460,6 +2224,12 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int titleTextStyle=0x7f010072;
+        /**  The id of the primary Toolbar child that you wish to use for the purpose of collapsing.
+             If you do not set this then the first Toolbar child found will be used. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int toolbarId=0x7f010106;
         /**  Default Toolar NavigationButtonStyle 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -1644,26 +2414,27 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f050003;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f06003a;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f06003b;
-        public static final int abc_color_highlight_material=0x7f06003c;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f06005b;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f06005c;
+        public static final int abc_color_highlight_material=0x7f06005d;
         public static final int abc_input_method_navigation_guard=0x7f060003;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f06003d;
-        public static final int abc_primary_text_disable_only_material_light=0x7f06003e;
-        public static final int abc_primary_text_material_dark=0x7f06003f;
-        public static final int abc_primary_text_material_light=0x7f060040;
-        public static final int abc_search_url_text=0x7f060041;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f06005e;
+        public static final int abc_primary_text_disable_only_material_light=0x7f06005f;
+        public static final int abc_primary_text_material_dark=0x7f060060;
+        public static final int abc_primary_text_material_light=0x7f060061;
+        public static final int abc_search_url_text=0x7f060062;
         public static final int abc_search_url_text_normal=0x7f060000;
         public static final int abc_search_url_text_pressed=0x7f060002;
         public static final int abc_search_url_text_selected=0x7f060001;
-        public static final int abc_secondary_text_material_dark=0x7f060042;
-        public static final int abc_secondary_text_material_light=0x7f060043;
+        public static final int abc_secondary_text_material_dark=0x7f060063;
+        public static final int abc_secondary_text_material_light=0x7f060064;
         public static final int accent_material_dark=0x7f060011;
         public static final int accent_material_light=0x7f060010;
         public static final int background_floating_material_dark=0x7f060008;
         public static final int background_floating_material_light=0x7f060009;
         public static final int background_material_dark=0x7f060006;
         public static final int background_material_light=0x7f060007;
+        public static final int bg_color=0x7f06005a;
         /**  White 50% 
          */
         public static final int bright_foreground_disabled_material_dark=0x7f06001a;
@@ -1676,12 +2447,49 @@ containing a value of this type.
         public static final int bright_foreground_material_light=0x7f060019;
         public static final int button_material_dark=0x7f060012;
         public static final int button_material_light=0x7f060013;
+        /**  Background color for dark CardView. 
+         */
+        public static final int cardview_dark_background=0x7f060044;
+        /**  Background color for light CardView. 
+         */
+        public static final int cardview_light_background=0x7f060043;
+        /**  Shadow color for the furthest pixels around CardView. 
+         */
+        public static final int cardview_shadow_end_color=0x7f060046;
+        /**  Shadow color for the first pixels around CardView. 
+         */
+        public static final int cardview_shadow_start_color=0x7f060045;
+        /**  Shadow color for the furthest pixels of a shadow 
+         */
+        public static final int design_fab_shadow_end_color=0x7f060040;
+        /**  Shadow color for the middle pixels of a shadow 
+         */
+        public static final int design_fab_shadow_mid_color=0x7f06003f;
+        /**  Shadow color for the first pixels of a shadow 
+         */
+        public static final int design_fab_shadow_start_color=0x7f06003e;
+        /**  Color for the bottom inner pixels in the stroke: 4% black (these are multiplied) 
+         */
+        public static final int design_fab_stroke_end_inner_color=0x7f06003d;
+        /**  Color for the bottom outer pixels in the stroke: 6% black (these are multiplied) 
+         */
+        public static final int design_fab_stroke_end_outer_color=0x7f06003c;
+        /**  Color for the top inner pixels in the stroke: 10% white (these are multiplied) 
+         */
+        public static final int design_fab_stroke_top_inner_color=0x7f06003b;
+        /**  Color for the top outer pixels in the stroke: 18% white (these are multiplied) 
+         */
+        public static final int design_fab_stroke_top_outer_color=0x7f06003a;
+        public static final int design_snackbar_background_color=0x7f060042;
+        public static final int design_textinput_error_color=0x7f060041;
         public static final int dim_foreground_disabled_material_dark=0x7f060020;
         public static final int dim_foreground_disabled_material_light=0x7f060021;
         public static final int dim_foreground_material_dark=0x7f06001e;
         public static final int dim_foreground_material_light=0x7f06001f;
         public static final int foreground_material_dark=0x7f060004;
         public static final int foreground_material_light=0x7f060005;
+        public static final int graphite=0x7f060048;
+        public static final int grey=0x7f06004a;
         /**  TODO: This is 40% alpha on the default accent color. 
          */
         public static final int highlighted_text_material_dark=0x7f060024;
@@ -1690,6 +2498,11 @@ containing a value of this type.
         public static final int highlighted_text_material_light=0x7f060025;
         public static final int hint_foreground_material_dark=0x7f060022;
         public static final int hint_foreground_material_light=0x7f060023;
+        public static final int light_grey=0x7f060049;
+        public static final int light_pink=0x7f06004b;
+        public static final int list_row_default_bg=0x7f060057;
+        public static final int list_row_pressed_bg=0x7f060058;
+        public static final int list_row_selected_bg=0x7f060059;
         public static final int material_blue_grey_800=0x7f060037;
         public static final int material_blue_grey_900=0x7f060038;
         public static final int material_blue_grey_950=0x7f060039;
@@ -1702,6 +2515,9 @@ containing a value of this type.
         public static final int material_grey_800=0x7f060030;
         public static final int material_grey_850=0x7f06002f;
         public static final int material_grey_900=0x7f06002e;
+        public static final int minimal_red=0x7f06004d;
+        public static final int off_white=0x7f06004c;
+        public static final int primaryColor=0x7f06004f;
         public static final int primary_dark_material_dark=0x7f06000c;
         public static final int primary_dark_material_light=0x7f06000d;
         public static final int primary_material_dark=0x7f06000a;
@@ -1718,6 +2534,8 @@ containing a value of this type.
         /**  26% of default values 
          */
         public static final int primary_text_disabled_material_light=0x7f06002a;
+        public static final int rippleEffectMaskColor=0x7f060052;
+        public static final int rippleEffectWaveColor=0x7f060053;
         /**  20% white (foreground) 
          */
         public static final int ripple_material_dark=0x7f06000e;
@@ -1734,10 +2552,17 @@ containing a value of this type.
         public static final int secondary_text_disabled_material_light=0x7f06002b;
         public static final int switch_thumb_disabled_material_dark=0x7f060016;
         public static final int switch_thumb_disabled_material_light=0x7f060017;
-        public static final int switch_thumb_material_dark=0x7f060044;
-        public static final int switch_thumb_material_light=0x7f060045;
+        public static final int switch_thumb_material_dark=0x7f060065;
+        public static final int switch_thumb_material_light=0x7f060066;
         public static final int switch_thumb_normal_material_dark=0x7f060014;
         public static final int switch_thumb_normal_material_light=0x7f060015;
+        public static final int teal=0x7f060047;
+        public static final int textHintColor=0x7f060051;
+        public static final int textPrimaryColor=0x7f060050;
+        public static final int text_color_default=0x7f060054;
+        public static final int text_color_inverse=0x7f060055;
+        public static final int transparency_color=0x7f06004e;
+        public static final int white=0x7f060056;
     }
     public static final class dimen {
         /**  Default content inset of an action bar. 
@@ -1904,6 +2729,7 @@ containing a value of this type.
  Default text size for action bar title.
          */
         public static final int abc_text_size_title_material_toolbar=0x7f070028;
+        public static final int activity_horizontal=0x7f07006d;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
@@ -1911,14 +2737,64 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f07004b;
-        public static final int activity_vertical_margin=0x7f07004c;
+        public static final int activity_horizontal_margin=0x7f07006b;
+        public static final int activity_vertical_margin=0x7f07006c;
+        public static final int bar_height=0x7f070071;
+        /**  Inset shadow for RoundRectDrawableWithShadow. It is used to avoid gaps between the card
+     and the shadow. 
+         */
+        public static final int cardview_compat_inset_shadow=0x7f07006a;
+        /**  Elevation value to use for CardViews. Pre-L, it is equal to shadow size. 
+         */
+        public static final int cardview_default_elevation=0x7f070069;
+        /**  Default radius for CardView corners. 
+         */
+        public static final int cardview_default_radius=0x7f070068;
+        public static final int design_appbar_elevation=0x7f070066;
+        public static final int design_fab_border_width=0x7f070050;
+        public static final int design_fab_content_size=0x7f07004d;
+        public static final int design_fab_elevation=0x7f07004b;
+        public static final int design_fab_size_mini=0x7f07004f;
+        public static final int design_fab_size_normal=0x7f07004e;
+        public static final int design_fab_translation_z_pressed=0x7f07004c;
+        public static final int design_navigation_elevation=0x7f070052;
+        public static final int design_navigation_icon_padding=0x7f070053;
+        public static final int design_navigation_icon_size=0x7f070054;
+        public static final int design_navigation_max_width=0x7f070051;
+        public static final int design_navigation_padding_bottom=0x7f070057;
+        public static final int design_navigation_padding_top_default=0x7f070056;
+        public static final int design_navigation_separator_vertical_padding=0x7f070055;
+        /**  The maximum width for a Snackbar's inline action. If the view is width than this then
+         the Snackbar will change to vertical stacking 
+         */
+        public static final int design_snackbar_action_inline_max_width=0x7f070064;
+        public static final int design_snackbar_background_corner_radius=0x7f07005f;
+        public static final int design_snackbar_elevation=0x7f07005e;
+        /**  Extra spacing between the action and message views 
+         */
+        public static final int design_snackbar_extra_spacing_horizontal=0x7f070063;
+        public static final int design_snackbar_max_width=0x7f07005d;
+        public static final int design_snackbar_min_width=0x7f07005c;
+        public static final int design_snackbar_padding_horizontal=0x7f070060;
+        public static final int design_snackbar_padding_vertical=0x7f070061;
+        public static final int design_snackbar_padding_vertical_2lines=0x7f070062;
+        public static final int design_snackbar_text_size=0x7f070065;
+        public static final int design_tab_max_width=0x7f070059;
+        public static final int design_tab_scrollable_min_width=0x7f070058;
+        public static final int design_tab_text_size=0x7f07005a;
+        public static final int design_tab_text_size_2line=0x7f07005b;
         public static final int disabled_alpha_material_dark=0x7f070001;
         public static final int disabled_alpha_material_light=0x7f070000;
-        public static final int eighteenDP=0x7f07004d;
+        public static final int eighteenDP=0x7f07006e;
+        public static final int header_height=0x7f070070;
+        public static final int header_logo_size=0x7f07006f;
         public static final int highlight_alpha_material_colored=0x7f070004;
         public static final int highlight_alpha_material_dark=0x7f070003;
         public static final int highlight_alpha_material_light=0x7f070002;
+        /**  The max amount of scroll ItemTouchHelper will trigger if dragged view is out of
+    RecyclerView's bounds.
+         */
+        public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f070067;
         /**  The width of the big icons in notifications. 
          */
         public static final int notification_large_icon_height=0x7f070026;
@@ -1929,6 +2805,11 @@ containing a value of this type.
          Time) 
          */
         public static final int notification_subtext_size=0x7f070027;
+        public static final int result_item_header_text_size=0x7f070074;
+        public static final int result_item_height=0x7f070073;
+        public static final int result_item_subheader_text_size=0x7f070075;
+        public static final int search_text_size=0x7f070072;
+        public static final int semester_heading_size=0x7f070076;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -2000,110 +2881,384 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020042;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020043;
         public static final int abc_textfield_search_material=0x7f020044;
-        public static final int ic_launcher=0x7f020045;
-        public static final int notification_template_icon_bg=0x7f020046;
+        public static final int actionbar_bottom=0x7f020045;
+        public static final int add=0x7f020046;
+        public static final int add_button=0x7f020047;
+        public static final int add_pressed=0x7f020048;
+        public static final int addassign=0x7f020049;
+        public static final int addc=0x7f02004a;
+        public static final int addcourse=0x7f02004b;
+        public static final int app_icon=0x7f02004c;
+        public static final int arrow_left_icon=0x7f02004d;
+        public static final int arrow_left_up_icon=0x7f02004e;
+        public static final int athena_grades=0x7f02004f;
+        public static final int athena_grades_small=0x7f020050;
+        public static final int bangalore=0x7f020051;
+        public static final int bcomment=0x7f020052;
+        public static final int bg_repeat=0x7f020053;
+        public static final int blue_moon=0x7f020054;
+        public static final int button_bg=0x7f020055;
+        public static final int button_item=0x7f020056;
+        public static final int button_schedule_gb=0x7f020057;
+        public static final int calendars12=0x7f020058;
+        public static final int card_background_blue=0x7f020059;
+        public static final int card_background_sqr_white=0x7f02005a;
+        public static final int category_container=0x7f02005b;
+        public static final int chalkboard_black=0x7f02005c;
+        public static final int circle_arrow_down=0x7f02005d;
+        public static final int circle_up_down=0x7f02005e;
+        public static final int class_container=0x7f02005f;
+        public static final int clock_icon=0x7f020060;
+        public static final int closeup5=0x7f020061;
+        public static final int closeup9=0x7f020062;
+        public static final int comment=0x7f020063;
+        public static final int coorg=0x7f020064;
+        public static final int course_shape=0x7f020065;
+        public static final int courselist=0x7f020066;
+        public static final int coursework=0x7f020067;
+        public static final int crumbled=0x7f020068;
+        public static final int dark=0x7f020069;
+        public static final int delete_icon=0x7f02006a;
+        public static final int design_fab_background=0x7f02006b;
+        public static final int design_snackbar_background=0x7f02006c;
+        public static final int edit=0x7f02006d;
+        public static final int edit3=0x7f02006e;
+        public static final int edit42=0x7f02006f;
+        public static final int edit422=0x7f020070;
+        public static final int edit_icon=0x7f020071;
+        public static final int entergrades=0x7f020072;
+        public static final int fon=0x7f020073;
+        public static final int font=0x7f020074;
+        public static final int gold=0x7f020075;
+        public static final int grade_container=0x7f020076;
+        public static final int grading_container=0x7f020077;
+        public static final int group_indicator=0x7f020078;
+        public static final int hi=0x7f020079;
+        public static final int home1=0x7f02007a;
+        public static final int home2=0x7f02007b;
+        public static final int home3=0x7f02007c;
+        public static final int home4=0x7f02007d;
+        public static final int home5=0x7f02007e;
+        public static final int home6=0x7f02007f;
+        public static final int home7=0x7f020080;
+        public static final int hounds=0x7f020081;
+        public static final int ic_discuss=0x7f020082;
+        public static final int ic_launcher=0x7f020083;
+        public static final int ic_menu_add=0x7f020084;
+        public static final int ic_transparent=0x7f020085;
+        public static final int info5=0x7f020086;
+        public static final int info5_tinted=0x7f020087;
+        public static final int keyboard54=0x7f020088;
+        public static final int keyboard54_tinted=0x7f020089;
+        public static final int layer_whatif=0x7f02008a;
+        public static final int layers_review=0x7f02008b;
+        public static final int layers_schedule=0x7f02008c;
+        public static final int layers_searchc=0x7f02008d;
+        public static final int layers_searchp=0x7f02008e;
+        public static final int left_oval_ripple=0x7f02008f;
+        public static final int line_bg=0x7f020090;
+        public static final int linearlayout_bg=0x7f020091;
+        public static final int list_item_text_selector=0x7f020092;
+        public static final int list_selector_flatcolor=0x7f020093;
+        public static final int logo=0x7f020094;
+        public static final int logo2=0x7f020095;
+        public static final int logo23=0x7f020096;
+        public static final int logo24=0x7f020097;
+        public static final int logo3=0x7f020098;
+        public static final int logo4=0x7f020099;
+        public static final int mainbutton_bg=0x7f02009a;
+        public static final int mainmenu=0x7f02009b;
+        public static final int manage=0x7f02009c;
+        public static final int manages=0x7f02009d;
+        public static final int mic_icon=0x7f02009e;
+        public static final int mysore=0x7f02009f;
+        public static final int notepaperb=0x7f0200a0;
+        public static final int notepaperw=0x7f0200a1;
+        public static final int notification_template_icon_bg=0x7f0200bf;
+        public static final int pencilback=0x7f0200a2;
+        public static final int rate=0x7f0200a3;
+        public static final int review=0x7f0200a4;
+        public static final int reviewc=0x7f0200a5;
+        public static final int right_oval_ripple=0x7f0200a6;
+        public static final int ripple=0x7f0200a7;
+        public static final int rounded_corners=0x7f0200a8;
+        public static final int sche=0x7f0200a9;
+        public static final int sched=0x7f0200aa;
+        public static final int scourses=0x7f0200ab;
+        public static final int search=0x7f0200ac;
+        public static final int searchc=0x7f0200ad;
+        public static final int searchcourse=0x7f0200ae;
+        public static final int searchp=0x7f0200af;
+        public static final int searchprof=0x7f0200b0;
+        public static final int settings=0x7f0200b1;
+        public static final int shape_course=0x7f0200b2;
+        public static final int sprofessor=0x7f0200b3;
+        public static final int togglearrow=0x7f0200b4;
+        public static final int tools=0x7f0200b5;
+        public static final int viewcourse=0x7f0200b6;
+        public static final int w3=0x7f0200b7;
+        public static final int wall=0x7f0200b8;
+        public static final int wallpaper=0x7f0200b9;
+        public static final int welcome=0x7f0200ba;
+        public static final int welcome2=0x7f0200bb;
+        public static final int what=0x7f0200bc;
+        public static final int what_if=0x7f0200bd;
+        public static final int whatif=0x7f0200be;
     }
     public static final class id {
-        public static final int LoginButton=0x7f090054;
-        public static final int Welcome=0x7f090050;
-        public static final int action0=0x7f090056;
-        public static final int action_bar=0x7f090041;
+        public static final int TextView01=0x7f09008b;
+        public static final int TextView02=0x7f09008c;
+        public static final int action0=0x7f0900d6;
+        public static final int action_bar=0x7f09005a;
         public static final int action_bar_activity_content=0x7f090003;
-        public static final int action_bar_container=0x7f090040;
-        public static final int action_bar_root=0x7f09003c;
+        public static final int action_bar_container=0x7f090059;
+        public static final int action_bar_root=0x7f090055;
         public static final int action_bar_spinner=0x7f090002;
-        public static final int action_bar_subtitle=0x7f090022;
-        public static final int action_bar_title=0x7f090021;
-        public static final int action_context_bar=0x7f090042;
-        public static final int action_divider=0x7f09005a;
+        public static final int action_bar_subtitle=0x7f09003b;
+        public static final int action_bar_title=0x7f09003a;
+        public static final int action_context_bar=0x7f09005b;
+        public static final int action_divider=0x7f0900da;
         public static final int action_menu_divider=0x7f090005;
         public static final int action_menu_presenter=0x7f090006;
-        public static final int action_mode_bar=0x7f09003e;
-        public static final int action_mode_bar_stub=0x7f09003d;
-        public static final int action_mode_close_button=0x7f090023;
-        public static final int action_settings=0x7f090063;
-        public static final int activity_chooser_view_content=0x7f090024;
-        public static final int alertTitle=0x7f090030;
-        public static final int always=0x7f090019;
-        public static final int beginning=0x7f09001e;
-        public static final int button1=0x7f090055;
-        public static final int buttonPanel=0x7f09002b;
-        public static final int cancel_action=0x7f090057;
-        public static final int checkbox=0x7f090039;
-        public static final int chronometer=0x7f09005d;
-        public static final int collapseActionView=0x7f09001a;
-        public static final int contentPanel=0x7f090031;
-        public static final int custom=0x7f090037;
-        public static final int customPanel=0x7f090036;
-        public static final int decor_content_parent=0x7f09003f;
-        public static final int default_activity_button=0x7f090027;
-        public static final int disableHome=0x7f09000d;
-        public static final int edit_query=0x7f090043;
-        public static final int end=0x7f09001f;
-        public static final int end_padder=0x7f090062;
-        public static final int expand_activities_button=0x7f090025;
-        public static final int expanded_menu=0x7f090038;
-        public static final int forgot_pw=0x7f090051;
+        public static final int action_mode_bar=0x7f090057;
+        public static final int action_mode_bar_stub=0x7f090056;
+        public static final int action_mode_close_button=0x7f09003c;
+        public static final int action_settings=0x7f0900f5;
+        public static final int activity_chooser_view_content=0x7f09003d;
+        public static final int addAssign=0x7f0900a7;
+        public static final int addCButton=0x7f09006f;
+        public static final int addCategory=0x7f0900b7;
+        public static final int addGrade=0x7f0900b9;
+        public static final int addGradeName=0x7f0900b3;
+        public static final int add_course=0x7f0900f6;
+        public static final int add_course_dialog_fragment_cancel_button=0x7f09009d;
+        public static final int add_course_dialog_fragment_create_button=0x7f09009e;
+        public static final int add_course_dialog_fragment_name_edit_text=0x7f09009a;
+        public static final int add_course_dialog_fragment_percentage_radio_button=0x7f09009c;
+        public static final int add_course_dialog_fragment_point_total_radio_button=0x7f09009b;
+        public static final int add_semester=0x7f0900fa;
+        public static final int alertTitle=0x7f090049;
+        public static final int always=0x7f09001b;
+        public static final int assignmentgrade=0x7f090096;
+        public static final int assignmentweight=0x7f090097;
+        public static final int beginning=0x7f090020;
+        public static final int bottom=0x7f090028;
+        public static final int bottomNumber=0x7f0900b6;
+        public static final int btn_cancel=0x7f0900be;
+        public static final int btn_cancel2=0x7f090085;
+        public static final int btn_cancel3=0x7f090099;
+        public static final int btn_login=0x7f0900bd;
+        public static final int btn_login2=0x7f090084;
+        public static final int btn_login3=0x7f090098;
+        public static final int buttonContainer=0x7f0900b8;
+        public static final int buttonPanel=0x7f090044;
+        public static final int buttonRegister=0x7f090077;
+        public static final int cancelAddGrade=0x7f0900ba;
+        public static final int cancel_action=0x7f0900d7;
+        public static final int card_view=0x7f09006a;
+        public static final int cardsVew=0x7f0900a0;
+        public static final int category=0x7f0900a3;
+        public static final int center=0x7f090026;
+        public static final int center_horizontal=0x7f090029;
+        public static final int center_vertical=0x7f09002a;
+        public static final int checkbox=0x7f090052;
+        public static final int chronometer=0x7f0900dd;
+        public static final int classList=0x7f09006e;
+        public static final int className=0x7f0900a5;
+        public static final int clip_horizontal=0x7f09002b;
+        public static final int clip_vertical=0x7f09002c;
+        public static final int collapseActionView=0x7f09001c;
+        public static final int confirm_placeholder=0x7f09007c;
+        public static final int container=0x7f090069;
+        public static final int contentPanel=0x7f09004a;
+        public static final int count=0x7f0900c1;
+        public static final int courseCreditsEntry=0x7f090087;
+        public static final int courseGPAEntry=0x7f090089;
+        public static final int courseNameEntry=0x7f090086;
+        public static final int courseS=0x7f09008d;
+        public static final int courseSemester=0x7f09008a;
+        public static final int coursenum=0x7f090080;
+        public static final int coursesub=0x7f090081;
+        public static final int cpwd=0x7f09008e;
+        public static final int currentGrade=0x7f0900eb;
+        public static final int currentText=0x7f0900ec;
+        public static final int custom=0x7f090050;
+        public static final int customPanel=0x7f09004f;
+        public static final int date=0x7f0900ce;
+        public static final int decor_content_parent=0x7f090058;
+        public static final int default_activity_button=0x7f090040;
+        public static final int description=0x7f0900a2;
+        public static final int design_menu_item_action_area=0x7f0900b1;
+        public static final int design_menu_item_action_area_stub=0x7f0900b0;
+        public static final int design_menu_item_text=0x7f0900af;
+        public static final int design_navigation_view=0x7f0900ae;
+        public static final int developer=0x7f0900f9;
+        public static final int disableHome=0x7f09000f;
+        public static final int dynamic_spinner=0x7f0900e3;
+        public static final int editGradeTitle=0x7f0900b2;
+        public static final int editName=0x7f0900d1;
+        public static final int editTextEmailID=0x7f0900d4;
+        public static final int editUsername=0x7f0900d3;
+        public static final int edit_query=0x7f09005c;
+        public static final int email_login_form=0x7f090071;
+        public static final int email_sign_in_button=0x7f090075;
+        public static final int end=0x7f090021;
+        public static final int end_padder=0x7f0900e0;
+        public static final int enterAlways=0x7f090033;
+        public static final int enterAlwaysCollapsed=0x7f090034;
+        public static final int exitUntilCollapsed=0x7f090035;
+        public static final int expand_activities_button=0x7f09003e;
+        public static final int expanded_menu=0x7f090051;
+        public static final int fill=0x7f090027;
+        public static final int fill_horizontal=0x7f09002d;
+        public static final int fill_vertical=0x7f09002e;
+        public static final int finalText=0x7f0900f0;
+        public static final int finalWorth=0x7f0900ef;
+        public static final int fixed=0x7f090024;
+        public static final int forgotpw=0x7f090078;
+        public static final int grid_item_btn=0x7f0900aa;
+        public static final int grid_item_btn2=0x7f0900bc;
+        public static final int header=0x7f0900c0;
         public static final int home=0x7f090000;
-        public static final int homeAsUp=0x7f09000e;
-        public static final int icon=0x7f090029;
-        public static final int ifRoom=0x7f09001b;
-        public static final int image=0x7f090026;
-        public static final int info=0x7f090061;
-        public static final int line1=0x7f09005b;
-        public static final int line3=0x7f09005f;
-        public static final int listMode=0x7f09000a;
-        public static final int list_item=0x7f090028;
-        public static final int media_actions=0x7f090059;
-        public static final int middle=0x7f090020;
-        public static final int multiply=0x7f090014;
-        public static final int never=0x7f09001c;
-        public static final int none=0x7f09000f;
-        public static final int normal=0x7f09000b;
-        public static final int parentPanel=0x7f09002d;
-        public static final int passwordLogin=0x7f090053;
+        public static final int homeAsUp=0x7f090010;
+        public static final int icon=0x7f090042;
+        public static final int ifRoom=0x7f09001d;
+        public static final int image=0x7f09003f;
+        public static final int imageView=0x7f0900c8;
+        public static final int imageView1=0x7f090070;
+        public static final int img=0x7f0900d0;
+        public static final int imgImage=0x7f09006b;
+        public static final int info=0x7f0900df;
+        public static final int information=0x7f0900f7;
+        public static final int inputSearch=0x7f0900e8;
+        public static final int inputSearch2=0x7f0900e6;
+        public static final int item_layout=0x7f0900c7;
+        /**  ItemTouchHelper uses this id to save a View's original elevation. 
+         */
+        public static final int item_touch_helper_previous_elevation=0x7f09000a;
+        public static final int label=0x7f0900a9;
+        public static final int label2=0x7f0900bb;
+        public static final int lblListHeader=0x7f0900cb;
+        public static final int left=0x7f09002f;
+        public static final int line1=0x7f0900db;
+        public static final int line3=0x7f0900de;
+        public static final int linear_layout=0x7f09006c;
+        public static final int listMode=0x7f09000c;
+        public static final int listView10=0x7f0900a8;
+        public static final int list_item=0x7f090041;
+        public static final int list_view=0x7f0900e9;
+        public static final int list_view2=0x7f0900e7;
+        public static final int listbackground=0x7f0900ca;
+        public static final int loadingPanel=0x7f09009f;
+        public static final int login_form=0x7f090079;
+        public static final int main_view=0x7f0900ea;
+        public static final int media_actions=0x7f0900d9;
+        public static final int middle=0x7f090022;
+        public static final int mini=0x7f090023;
+        public static final int multi=0x7f0900e4;
+        public static final int multiply=0x7f090016;
+        public static final int name=0x7f0900a1;
+        public static final int navigation_header_container=0x7f0900ad;
+        public static final int needText=0x7f0900f2;
+        public static final int never=0x7f09001e;
+        public static final int none=0x7f090011;
+        public static final int normal=0x7f09000d;
+        public static final int number=0x7f0900c9;
+        public static final int parallax=0x7f090038;
+        public static final int parentPanel=0x7f090046;
+        public static final int password=0x7f090074;
+        public static final int password_placeholder=0x7f09007b;
+        public static final int percentage=0x7f0900a4;
+        public static final int pin=0x7f090039;
+        public static final int product_name=0x7f0900e1;
+        public static final int professor=0x7f0900a6;
+        public static final int professsor=0x7f090082;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
-        public static final int radio=0x7f09003b;
-        public static final int screen=0x7f090015;
-        public static final int scrollIndicatorDown=0x7f090035;
-        public static final int scrollIndicatorUp=0x7f090032;
-        public static final int scrollView=0x7f090033;
-        public static final int search_badge=0x7f090045;
-        public static final int search_bar=0x7f090044;
-        public static final int search_button=0x7f090046;
-        public static final int search_close_btn=0x7f09004b;
-        public static final int search_edit_frame=0x7f090047;
-        public static final int search_go_btn=0x7f09004d;
-        public static final int search_mag_icon=0x7f090048;
-        public static final int search_plate=0x7f090049;
-        public static final int search_src_text=0x7f09004a;
-        public static final int search_voice_btn=0x7f09004e;
-        public static final int select_dialog_listview=0x7f09004f;
-        public static final int shortcut=0x7f09003a;
-        public static final int showCustom=0x7f090010;
-        public static final int showHome=0x7f090011;
-        public static final int showTitle=0x7f090012;
-        public static final int spacer=0x7f09002c;
+        public static final int pwd=0x7f0900d5;
+        public static final int radio=0x7f090054;
+        public static final int radioCategory=0x7f090090;
+        public static final int radioFinal=0x7f090094;
+        public static final int radioHomework=0x7f090091;
+        public static final int radioMidterm=0x7f090093;
+        public static final int radioOther=0x7f090095;
+        public static final int radioProject=0x7f090092;
+        public static final int ratingBar1=0x7f0900e5;
+        public static final int reporter=0x7f0900cd;
+        public static final int reviewb=0x7f0900c5;
+        public static final int right=0x7f090030;
+        public static final int ripple_mask=0x7f0900f4;
+        public static final int saveButton=0x7f0900e2;
+        public static final int scheduleb=0x7f0900c2;
+        public static final int screen=0x7f090017;
+        public static final int scroll=0x7f090036;
+        public static final int scrollIndicatorDown=0x7f09004e;
+        public static final int scrollIndicatorUp=0x7f09004b;
+        public static final int scrollView=0x7f09004c;
+        public static final int scrollable=0x7f090025;
+        public static final int search_badge=0x7f09005e;
+        public static final int search_bar=0x7f09005d;
+        public static final int search_button=0x7f09005f;
+        public static final int search_close_btn=0x7f090064;
+        public static final int search_edit_frame=0x7f090060;
+        public static final int search_go_btn=0x7f090066;
+        public static final int search_mag_icon=0x7f090061;
+        public static final int search_plate=0x7f090062;
+        public static final int search_src_text=0x7f090063;
+        public static final int search_voice_btn=0x7f090067;
+        public static final int searchcb=0x7f0900c3;
+        public static final int searchpb=0x7f0900c4;
+        public static final int select_dialog_listview=0x7f090068;
+        public static final int semester=0x7f090083;
+        public static final int shortcut=0x7f090053;
+        public static final int showCustom=0x7f090012;
+        public static final int showHome=0x7f090013;
+        public static final int showTitle=0x7f090014;
+        public static final int signOut=0x7f0900f8;
+        public static final int signUp=0x7f09007d;
+        public static final int snackbar_action=0x7f0900ac;
+        public static final int snackbar_text=0x7f0900ab;
+        public static final int snap=0x7f090037;
+        public static final int spacer=0x7f090045;
         public static final int split_action_bar=0x7f090004;
-        public static final int src_atop=0x7f090016;
-        public static final int src_in=0x7f090017;
-        public static final int src_over=0x7f090018;
-        public static final int status_bar_latest_event_content=0x7f090058;
-        public static final int submit_area=0x7f09004c;
-        public static final int tabMode=0x7f09000c;
-        public static final int text=0x7f090060;
-        public static final int text2=0x7f09005e;
-        public static final int textSpacerNoButtons=0x7f090034;
-        public static final int time=0x7f09005c;
-        public static final int title=0x7f09002a;
-        public static final int title_template=0x7f09002f;
-        public static final int topPanel=0x7f09002e;
+        public static final int src_atop=0x7f090018;
+        public static final int src_in=0x7f090019;
+        public static final int src_over=0x7f09001a;
+        public static final int start=0x7f090031;
+        public static final int status_bar_latest_event_content=0x7f0900d8;
+        public static final int submit_area=0x7f090065;
+        public static final int t_bg=0x7f0900f3;
+        public static final int tabMode=0x7f09000e;
+        public static final int text=0x7f09007e;
+        public static final int text2=0x7f09008f;
+        public static final int textHint=0x7f0900cc;
+        public static final int textSpacerNoButtons=0x7f09004d;
+        public static final int textTitle=0x7f0900bf;
+        public static final int textView=0x7f090076;
+        public static final int textView2=0x7f090072;
+        public static final int textView3=0x7f090088;
+        public static final int textView6=0x7f0900d2;
+        public static final int time=0x7f0900dc;
+        public static final int title=0x7f090043;
+        public static final int title_template=0x7f090048;
+        public static final int top=0x7f090032;
+        public static final int topNumber=0x7f0900b5;
+        public static final int topPanel=0x7f090047;
+        public static final int txt=0x7f0900cf;
+        public static final int txt_name=0x7f09007f;
+        public static final int txtdescription=0x7f09006d;
         public static final int up=0x7f090001;
-        public static final int useLogo=0x7f090013;
-        public static final int usernameLogin=0x7f090052;
-        public static final int withText=0x7f09001d;
-        public static final int wrap_content=0x7f090009;
+        public static final int useLogo=0x7f090015;
+        public static final int username=0x7f090073;
+        public static final int username_placeholder=0x7f09007a;
+        public static final int valuesContainer=0x7f0900b4;
+        public static final int view_offset_helper=0x7f090009;
+        public static final int wantText=0x7f0900ee;
+        public static final int whatNeed=0x7f0900f1;
+        public static final int whatWant=0x7f0900ed;
+        public static final int whatifb=0x7f0900c6;
+        public static final int withText=0x7f09001f;
+        public static final int wrap_content=0x7f09000b;
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur=0x7f080001;
@@ -2134,6 +3289,7 @@ containing a value of this type.
          */
         public static final int abc_max_action_buttons=0x7f080004;
         public static final int cancel_button_image_alpha=0x7f080003;
+        public static final int design_snackbar_text_max_lines=0x7f080005;
         /**  Maximum numerical value that will be shown in a status bar
          notification icon or in the notification itself. Will be replaced
          with @string/status_bar_notification_info_overflow when shown in the
@@ -2167,24 +3323,68 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030016;
         public static final int abc_search_view=0x7f030017;
         public static final int abc_select_dialog_material=0x7f030018;
-        public static final int activity_main=0x7f030019;
-        public static final int notification_media_action=0x7f03001a;
-        public static final int notification_media_cancel_action=0x7f03001b;
-        public static final int notification_template_big_media=0x7f03001c;
-        public static final int notification_template_big_media_narrow=0x7f03001d;
-        public static final int notification_template_lines=0x7f03001e;
-        public static final int notification_template_media=0x7f03001f;
-        public static final int notification_template_part_chronometer=0x7f030020;
-        public static final int notification_template_part_time=0x7f030021;
-        public static final int select_dialog_item_material=0x7f030022;
-        public static final int select_dialog_multichoice_material=0x7f030023;
-        public static final int select_dialog_singlechoice_material=0x7f030024;
-        public static final int support_simple_spinner_dropdown_item=0x7f030025;
+        public static final int activity_classes=0x7f030019;
+        public static final int activity_login=0x7f03001a;
+        public static final int activity_register=0x7f03001b;
+        public static final int add_course=0x7f03001c;
+        public static final int add_course_dialog=0x7f03001d;
+        public static final int add_course_work=0x7f03001e;
+        public static final int addcourse=0x7f03001f;
+        public static final int attrs=0x7f030020;
+        public static final int card_view_layout=0x7f030021;
+        public static final int category=0x7f030022;
+        public static final int category_item=0x7f030023;
+        public static final int class_item=0x7f030024;
+        public static final int course_work_activity=0x7f030025;
+        public static final int custom_grid=0x7f030026;
+        public static final int design_layout_snackbar=0x7f030027;
+        public static final int design_layout_snackbar_include=0x7f030028;
+        public static final int design_layout_tab_icon=0x7f030029;
+        public static final int design_layout_tab_text=0x7f03002a;
+        public static final int design_menu_item_action_area=0x7f03002b;
+        public static final int design_navigation_item=0x7f03002c;
+        public static final int design_navigation_item_header=0x7f03002d;
+        public static final int design_navigation_item_separator=0x7f03002e;
+        public static final int design_navigation_item_subheader=0x7f03002f;
+        public static final int design_navigation_menu=0x7f030030;
+        public static final int design_navigation_menu_item=0x7f030031;
+        public static final int edit_grade=0x7f030032;
+        public static final int eval_custom_grid=0x7f030033;
+        public static final int forgot_password_activity=0x7f030034;
+        public static final int group_item=0x7f030035;
+        public static final int header=0x7f030036;
+        public static final int home_activity=0x7f030037;
+        public static final int item=0x7f030038;
+        public static final int list_group=0x7f030039;
+        public static final int list_item=0x7f03003a;
+        public static final int list_row_layout=0x7f03003b;
+        public static final int list_single=0x7f03003c;
+        public static final int new_user_activity=0x7f03003d;
+        public static final int notification_media_action=0x7f03003e;
+        public static final int notification_media_cancel_action=0x7f03003f;
+        public static final int notification_template_big_media=0x7f030040;
+        public static final int notification_template_big_media_narrow=0x7f030041;
+        public static final int notification_template_lines=0x7f030042;
+        public static final int notification_template_media=0x7f030043;
+        public static final int notification_template_part_chronometer=0x7f030044;
+        public static final int notification_template_part_time=0x7f030045;
+        public static final int professor_list=0x7f030046;
+        public static final int review_activity=0x7f030047;
+        public static final int search_course_activity=0x7f030048;
+        public static final int search_professor_activity=0x7f030049;
+        public static final int select_dialog_item_material=0x7f03004a;
+        public static final int select_dialog_multichoice_material=0x7f03004b;
+        public static final int select_dialog_singlechoice_material=0x7f03004c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03004d;
+        public static final int what_activity=0x7f03004e;
     }
     public static final class menu {
-        public static final int main=0x7f0c0000;
+        public static final int courses=0x7f0d0000;
+        public static final int logged_in=0x7f0d0001;
+        public static final int main=0x7f0d0002;
     }
     public static final class string {
+        public static final int Professors=0x7f0a0022;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f0a0001;
@@ -2250,13 +3450,165 @@ containing a value of this type.
         /**  Content description for the Toolbar icon used to collapse an expanded action mode. [CHAR LIMIT=NONE] 
          */
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
-        public static final int action_settings=0x7f0a0016;
-        public static final int app_name=0x7f0a0014;
-        public static final int clickHere=0x7f0a001c;
-        public static final int forgot_pw=0x7f0a0018;
-        public static final int hello_world=0x7f0a0015;
-        public static final int login=0x7f0a001b;
-        public static final int password=0x7f0a001a;
+        public static final int about=0x7f0a00a4;
+        public static final int aboutText=0x7f0a00a9;
+        public static final int about_activity_text=0x7f0a0065;
+        /**  About Activity 
+         */
+        public static final int about_activity_title=0x7f0a0064;
+        public static final int acquired=0x7f0a002d;
+        public static final int action_info=0x7f0a0073;
+        public static final int action_settings=0x7f0a0018;
+        public static final int action_sign_in=0x7f0a007f;
+        public static final int action_sign_in_short=0x7f0a0080;
+        public static final int activity_info=0x7f0a0066;
+        public static final int add=0x7f0a0035;
+        public static final int addClass=0x7f0a0093;
+        public static final int addGrade=0x7f0a009c;
+        public static final int addGradeButton=0x7f0a00a5;
+        public static final int addGradeName=0x7f0a00a0;
+        public static final int addGradeTitle=0x7f0a00a7;
+        public static final int addGrading=0x7f0a0094;
+        public static final int addProfessor=0x7f0a0096;
+        public static final int add_course_dialog_fragment_cancel_button=0x7f0a004f;
+        public static final int add_course_dialog_fragment_course_name=0x7f0a004a;
+        public static final int add_course_dialog_fragment_create_course_button=0x7f0a004e;
+        public static final int add_course_dialog_fragment_grade_type=0x7f0a004b;
+        public static final int add_course_dialog_fragment_grade_type_percentage=0x7f0a004d;
+        public static final int add_course_dialog_fragment_grade_type_point_total=0x7f0a004c;
+        /**  Add Course Dialog Fragment 
+         */
+        public static final int add_course_dialog_fragment_title=0x7f0a0049;
+        public static final int add_eval=0x7f0a0036;
+        public static final int add_grade_component_dialog_cancel_button=0x7f0a0061;
+        public static final int add_grade_component_dialog_create_button=0x7f0a0062;
+        public static final int add_grade_component_dialog_earned_percentage=0x7f0a0060;
+        public static final int add_grade_component_dialog_earned_points=0x7f0a005f;
+        public static final int add_grade_component_dialog_name=0x7f0a005c;
+        /**  Add Grade Component Dialog 
+         */
+        public static final int add_grade_component_dialog_title=0x7f0a005b;
+        public static final int add_grade_component_dialog_total_points=0x7f0a005d;
+        public static final int add_grade_component_dialog_weight=0x7f0a005e;
+        public static final int app_name=0x7f0a0016;
+        /**  The class name to the ScrollingChildBehavior required for AppBarLayout 
+         */
+        public static final int appbar_scrolling_view_behavior=0x7f0a0014;
+        public static final int assignment=0x7f0a007c;
+        public static final int breakdown=0x7f0a0075;
+        public static final int bucket_list_instructions=0x7f0a0077;
+        public static final int buy_full_version_fragment_buy_button=0x7f0a0047;
+        /**  Buy Full Version Fragment 
+         */
+        public static final int buy_full_version_fragment_buy_notice=0x7f0a0046;
+        public static final int cancelAdd=0x7f0a0099;
+        public static final int cancelAddGrade=0x7f0a00a6;
+        public static final int category=0x7f0a009a;
+        public static final int categoryName=0x7f0a009e;
+        /**  The text pattern for the character counter 
+         */
+        public static final int character_counter_pattern=0x7f0a0015;
+        public static final int className=0x7f0a0097;
+        public static final int class_info=0x7f0a0074;
+        public static final int classes=0x7f0a0092;
+        public static final int clickHere=0x7f0a001e;
+        public static final int confirm_placeholder=0x7f0a008f;
+        public static final int course_activity_context_menu_delete=0x7f0a0054;
+        public static final int course_activity_context_menu_edit=0x7f0a0053;
+        /**  Course Activity 
+         */
+        public static final int course_activity_menu_add_component=0x7f0a0052;
+        public static final int course_list_activity_context_menu_delete=0x7f0a0041;
+        public static final int course_list_activity_context_menu_edit=0x7f0a0040;
+        public static final int course_list_activity_menu_about=0x7f0a003f;
+        public static final int course_list_activity_menu_add_course=0x7f0a003e;
+        /**  Global 
+ Course List Activity 
+         */
+        public static final int course_list_activity_title=0x7f0a003d;
+        public static final int course_list_activity_toast_add_course_denied=0x7f0a0045;
+        public static final int course_list_activity_toast_billing_unavailable=0x7f0a0043;
+        public static final int course_list_activity_toast_full_version_refunded=0x7f0a0044;
+        public static final int course_list_activity_toast_unlocked=0x7f0a0042;
+        /**  Course List Fragment 
+         */
+        public static final int course_list_fragment_no_courses_notice=0x7f0a0048;
+        public static final int course_name=0x7f0a0069;
+        /**  Course Overview Fragment 
+         */
+        public static final int course_overview_fragment_overall_grade=0x7f0a005a;
+        public static final int coursepage=0x7f0a0026;
+        public static final int courses=0x7f0a002e;
+        public static final int courses_list_heading=0x7f0a006d;
+        public static final int credits=0x7f0a006a;
+        public static final int currentGrade=0x7f0a0023;
+        public static final int deleteClass=0x7f0a009d;
+        public static final int deleteGrade=0x7f0a00a3;
+        public static final int desired=0x7f0a002b;
+        public static final int developer=0x7f0a008c;
+        public static final int editGrade=0x7f0a00a1;
+        public static final int editGradeTitle=0x7f0a00a2;
+        public static final int edit_course_dialog_fragment_save_course_button=0x7f0a0051;
+        /**  Edit Course Dialog Fragment 
+         */
+        public static final int edit_course_dialog_fragment_title=0x7f0a0050;
+        /**  Edit Grade Component Dialog 
+         */
+        public static final int edit_grade_component_dialog_save_button=0x7f0a0063;
+        public static final int email_client_error=0x7f0a0038;
+        public static final int email_subject=0x7f0a0039;
+        public static final int enterGrade=0x7f0a001f;
+        public static final int error_field_required=0x7f0a0084;
+        public static final int error_incorrect_password=0x7f0a0083;
+        public static final int error_invalid_email=0x7f0a0081;
+        public static final int error_invalid_password=0x7f0a0082;
+        public static final int finalWorth=0x7f0a0025;
+        public static final int forgot_pw=0x7f0a001a;
+        public static final int gpa=0x7f0a006c;
+        public static final int grade=0x7f0a006e;
+        /**  Grade Component List Fragment 
+         */
+        public static final int grade_component_list_fragment_no_components_notice=0x7f0a0055;
+        public static final int grade_component_list_fragment_percentage_earned=0x7f0a0058;
+        public static final int grade_component_list_fragment_points_earned=0x7f0a0056;
+        public static final int grade_component_list_fragment_total_points=0x7f0a0057;
+        public static final int grade_component_list_fragment_weight=0x7f0a0059;
+        public static final int gradeacti=0x7f0a0028;
+        public static final int grades=0x7f0a0079;
+        public static final int grading=0x7f0a0095;
+        public static final int graduation=0x7f0a007a;
+        public static final int hello_blank_fragment=0x7f0a007b;
+        public static final int hello_world=0x7f0a0017;
+        public static final int home=0x7f0a0020;
+        public static final int home_instructions=0x7f0a0076;
+        public static final int image=0x7f0a0031;
+        public static final int login=0x7f0a001d;
+        public static final int my_subjects_button_edit_description=0x7f0a0089;
+        public static final int my_subjects_edit_dialog_title=0x7f0a008a;
+        public static final int my_subjects_title=0x7f0a0088;
+        public static final int name=0x7f0a0034;
+        public static final int number=0x7f0a0033;
+        public static final int optional=0x7f0a006b;
+        public static final int outOf=0x7f0a00a8;
+        public static final int password=0x7f0a001c;
+        public static final int password_placeholder=0x7f0a008e;
+        public static final int percentage=0x7f0a009b;
+        public static final int permission_rationale=0x7f0a0085;
+        public static final int preference_file_key=0x7f0a0072;
+        public static final int profile_instructions=0x7f0a0078;
+        public static final int prompt=0x7f0a0071;
+        public static final int prompt_email=0x7f0a007d;
+        public static final int prompt_password=0x7f0a007e;
+        public static final int required=0x7f0a002c;
+        public static final int save=0x7f0a003a;
+        public static final int score=0x7f0a009f;
+        public static final int searchC=0x7f0a0029;
+        public static final int searchP=0x7f0a002a;
+        public static final int semester_list_heading=0x7f0a0067;
+        public static final int semester_name=0x7f0a0068;
+        public static final int signIn=0x7f0a0090;
+        public static final int signOut=0x7f0a008b;
+        public static final int signUp=0x7f0a0091;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated. May need to be localized
@@ -2264,10 +3616,31 @@ containing a value of this type.
          [CHAR LIMIT=4] 
          */
         public static final int status_bar_notification_info_overflow=0x7f0a0011;
-        public static final int username=0x7f0a0019;
-        public static final int welcome=0x7f0a0017;
+        public static final int submitClass=0x7f0a0098;
+        public static final int title=0x7f0a0032;
+        public static final int title_activity_add_course=0x7f0a0030;
+        public static final int title_activity_add_evaluation=0x7f0a0037;
+        public static final int title_activity_course=0x7f0a003c;
+        public static final int title_activity_courses=0x7f0a002f;
+        public static final int title_activity_display=0x7f0a0086;
+        public static final int title_activity_enter=0x7f0a0070;
+        public static final int title_activity_home=0x7f0a0087;
+        public static final int title_activity_splash_screen=0x7f0a006f;
+        public static final int userhome=0x7f0a0021;
+        public static final int username=0x7f0a001b;
+        public static final int username_placeholder=0x7f0a008d;
+        public static final int weight=0x7f0a003b;
+        public static final int welcome=0x7f0a0019;
+        public static final int whatNeed=0x7f0a0027;
+        public static final int whatWant=0x7f0a0024;
     }
     public static final class style {
+        public static final int AddressBookImageItem=0x7f0b0152;
+        public static final int AddressBookItemName=0x7f0b0151;
+        public static final int AddressBookLabel=0x7f0b014e;
+        public static final int AddressBookList=0x7f0b014f;
+        public static final int AddressBookListItem=0x7f0b0150;
+        public static final int AddressListWrap=0x7f0b014d;
         public static final int AlertDialog_AppCompat=0x7f0b0042;
         public static final int AlertDialog_AppCompat_Light=0x7f0b0043;
         public static final int Animation_AppCompat_Dialog=0x7f0b0049;
@@ -2280,6 +3653,8 @@ containing a value of this type.
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+            
+            
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -2293,11 +3668,11 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f0b0133;
+        public static final int AppBaseTheme=0x7f0b0148;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f0b0134;
+        public static final int AppTheme=0x7f0b0149;
         public static final int Base_AlertDialog_AppCompat=0x7f0b00cc;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f0b00cd;
         public static final int Base_Animation_AppCompat_Dialog=0x7f0b00c8;
@@ -2485,6 +3860,12 @@ containing a value of this type.
     
          */
         public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b00ae;
+        public static final int Base_Widget_Design_TabLayout=0x7f0b0137;
+        public static final int ButtonText=0x7f0b0147;
+        public static final int CardView=0x7f0b0144;
+        public static final int CardView_Dark=0x7f0b0146;
+        public static final int CardView_Light=0x7f0b0145;
+        public static final int LayoutWrap=0x7f0b014c;
         public static final int Platform_AppCompat=0x7f0b0109;
         public static final int Platform_AppCompat_Light=0x7f0b010a;
         /**  Overlay themes 
@@ -2557,6 +3938,13 @@ containing a value of this type.
         public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0b002a;
         public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0b0063;
         public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0b0064;
+        public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f0b0143;
+        public static final int TextAppearance_Design_Counter=0x7f0b013c;
+        public static final int TextAppearance_Design_Counter_Overflow=0x7f0b013d;
+        public static final int TextAppearance_Design_Error=0x7f0b013b;
+        public static final int TextAppearance_Design_Hint=0x7f0b013a;
+        public static final int TextAppearance_Design_Snackbar_Message=0x7f0b013e;
+        public static final int TextAppearance_Design_Tab=0x7f0b0138;
         /**  These styles didn't exist on v7. Since we only use the media template in later versions
          (ICS+), just define it here and use the correct references in values/v14 
  Use platform styles 
@@ -2707,6 +4095,17 @@ containing a value of this type.
          */
         public static final int Widget_AppCompat_Toolbar=0x7f0b0045;
         public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b0046;
+        public static final int Widget_Design_AppBarLayout=0x7f0b0141;
+        public static final int Widget_Design_CollapsingToolbar=0x7f0b0140;
+        public static final int Widget_Design_CoordinatorLayout=0x7f0b0142;
+        public static final int Widget_Design_FloatingActionButton=0x7f0b0133;
+        public static final int Widget_Design_NavigationView=0x7f0b0135;
+        public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f0b0134;
+        public static final int Widget_Design_Snackbar=0x7f0b013f;
+        public static final int Widget_Design_TabLayout=0x7f0b0136;
+        public static final int Widget_Design_TextInputLayout=0x7f0b0139;
+        public static final int WrapBoth=0x7f0b014a;
+        public static final int WrapHeight=0x7f0b014b;
     }
     public static final class styleable {
         /**  ============================================ 
@@ -3478,6 +4877,121 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name dropgrade.dropgrade:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
+        /** Attributes that can be used with a AppBarLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AppBarLayout_android_background android:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_elevation dropgrade.dropgrade:elevation}</code></td><td> Elevation for the action bar itself </td></tr>
+           <tr><td><code>{@link #AppBarLayout_expanded dropgrade.dropgrade:expanded}</code></td><td> The initial expanded state for the AppBarLayout.</td></tr>
+           </table>
+           @see #AppBarLayout_android_background
+           @see #AppBarLayout_elevation
+           @see #AppBarLayout_expanded
+         */
+        public static final int[] AppBarLayout = {
+            0x010100d4, 0x7f010085, 0x7f0100f9
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#background}
+          attribute's value can be found in the {@link #AppBarLayout} array.
+          @attr name android:background
+        */
+        public static final int AppBarLayout_android_background = 0;
+        /**
+          <p>
+          @attr description
+           Elevation for the action bar itself 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:elevation
+        */
+        public static final int AppBarLayout_elevation = 1;
+        /**
+          <p>
+          @attr description
+           The initial expanded state for the AppBarLayout. This only takes effect when this
+             view is a direct child of a CoordinatorLayout. 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expanded
+        */
+        public static final int AppBarLayout_expanded = 2;
+        /** Attributes that can be used with a AppBarLayout_LayoutParams.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollFlags dropgrade.dropgrade:layout_scrollFlags}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollInterpolator dropgrade.dropgrade:layout_scrollInterpolator}</code></td><td> An interpolator to use when scrolling this View.</td></tr>
+           </table>
+           @see #AppBarLayout_LayoutParams_layout_scrollFlags
+           @see #AppBarLayout_LayoutParams_layout_scrollInterpolator
+         */
+        public static final int[] AppBarLayout_LayoutParams = {
+            0x7f0100fa, 0x7f0100fb
+        };
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#layout_scrollFlags}
+          attribute's value can be found in the {@link #AppBarLayout_LayoutParams} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>scroll</code></td><td>0x1</td><td> The view will be scroll in direct relation to scroll events. This flag needs to be
+                 set for any of the other flags to take effect. If any sibling views
+                 before this one do not have this flag, then this value has no effect. </td></tr>
+<tr><td><code>exitUntilCollapsed</code></td><td>0x2</td><td> When exiting (scrolling off screen) the view will be scrolled until it is
+                 'collapsed'. The collapsed height is defined by the view's minimum height. </td></tr>
+<tr><td><code>enterAlways</code></td><td>0x4</td><td> When entering (scrolling on screen) the view will scroll on any downwards
+                 scroll event, regardless of whether the scrolling view is also scrolling. This
+                 is commonly referred to as the 'quick return' pattern. </td></tr>
+<tr><td><code>enterAlwaysCollapsed</code></td><td>0x8</td><td> An additional flag for 'enterAlways' which modifies the returning view to
+                 only initially scroll back to it's collapsed height. Once the scrolling view has
+                 reached the end of it's scroll range, the remainder of this view will be scrolled
+                 into view. </td></tr>
+<tr><td><code>snap</code></td><td>0x10</td><td> Upon a scroll ending, if the view is only partially visible then it will be
+                 snapped and scrolled to it's closest edge. </td></tr>
+</table>
+          @attr name dropgrade.dropgrade:layout_scrollFlags
+        */
+        public static final int AppBarLayout_LayoutParams_layout_scrollFlags = 0;
+        /**
+          <p>
+          @attr description
+           An interpolator to use when scrolling this View. Only takes effect when View
+             is scrollable. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:layout_scrollInterpolator
+        */
+        public static final int AppBarLayout_LayoutParams_layout_scrollInterpolator = 1;
         /** Attributes that can be used with a AppCompatTextView.
            <p>Includes the following attributes:</p>
            <table>
@@ -3543,6 +5057,589 @@ containing a value of this type.
           @attr name dropgrade.dropgrade:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
+        /** Attributes that can be used with a CardView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CardView_cardBackgroundColor dropgrade.dropgrade:cardBackgroundColor}</code></td><td> Background color for CardView.</td></tr>
+           <tr><td><code>{@link #CardView_cardCornerRadius dropgrade.dropgrade:cardCornerRadius}</code></td><td> Corner radius for CardView.</td></tr>
+           <tr><td><code>{@link #CardView_cardElevation dropgrade.dropgrade:cardElevation}</code></td><td> Elevation for CardView.</td></tr>
+           <tr><td><code>{@link #CardView_cardMaxElevation dropgrade.dropgrade:cardMaxElevation}</code></td><td> Maximum Elevation for CardView.</td></tr>
+           <tr><td><code>{@link #CardView_cardPreventCornerOverlap dropgrade.dropgrade:cardPreventCornerOverlap}</code></td><td> Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.</td></tr>
+           <tr><td><code>{@link #CardView_cardUseCompatPadding dropgrade.dropgrade:cardUseCompatPadding}</code></td><td> Add padding in API v21+ as well to have the same measurements with previous versions.</td></tr>
+           <tr><td><code>{@link #CardView_contentPadding dropgrade.dropgrade:contentPadding}</code></td><td> Inner padding between the edges of the Card and children of the CardView.</td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingBottom dropgrade.dropgrade:contentPaddingBottom}</code></td><td> Inner padding between the bottom edge of the Card and children of the CardView.</td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingLeft dropgrade.dropgrade:contentPaddingLeft}</code></td><td> Inner padding between the left edge of the Card and children of the CardView.</td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingRight dropgrade.dropgrade:contentPaddingRight}</code></td><td> Inner padding between the right edge of the Card and children of the CardView.</td></tr>
+           <tr><td><code>{@link #CardView_contentPaddingTop dropgrade.dropgrade:contentPaddingTop}</code></td><td> Inner padding between the top edge of the Card and children of the CardView.</td></tr>
+           </table>
+           @see #CardView_cardBackgroundColor
+           @see #CardView_cardCornerRadius
+           @see #CardView_cardElevation
+           @see #CardView_cardMaxElevation
+           @see #CardView_cardPreventCornerOverlap
+           @see #CardView_cardUseCompatPadding
+           @see #CardView_contentPadding
+           @see #CardView_contentPaddingBottom
+           @see #CardView_contentPaddingLeft
+           @see #CardView_contentPaddingRight
+           @see #CardView_contentPaddingTop
+         */
+        public static final int[] CardView = {
+            0x7f010110, 0x7f010111, 0x7f010112, 0x7f010113,
+            0x7f010114, 0x7f010115, 0x7f010116, 0x7f010117,
+            0x7f010118, 0x7f010119, 0x7f01011a
+        };
+        /**
+          <p>
+          @attr description
+           Background color for CardView. 
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:cardBackgroundColor
+        */
+        public static final int CardView_cardBackgroundColor = 0;
+        /**
+          <p>
+          @attr description
+           Corner radius for CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:cardCornerRadius
+        */
+        public static final int CardView_cardCornerRadius = 1;
+        /**
+          <p>
+          @attr description
+           Elevation for CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:cardElevation
+        */
+        public static final int CardView_cardElevation = 2;
+        /**
+          <p>
+          @attr description
+           Maximum Elevation for CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:cardMaxElevation
+        */
+        public static final int CardView_cardMaxElevation = 3;
+        /**
+          <p>
+          @attr description
+           Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:cardPreventCornerOverlap
+        */
+        public static final int CardView_cardPreventCornerOverlap = 5;
+        /**
+          <p>
+          @attr description
+           Add padding in API v21+ as well to have the same measurements with previous versions. 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:cardUseCompatPadding
+        */
+        public static final int CardView_cardUseCompatPadding = 4;
+        /**
+          <p>
+          @attr description
+           Inner padding between the edges of the Card and children of the CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:contentPadding
+        */
+        public static final int CardView_contentPadding = 6;
+        /**
+          <p>
+          @attr description
+           Inner padding between the bottom edge of the Card and children of the CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:contentPaddingBottom
+        */
+        public static final int CardView_contentPaddingBottom = 10;
+        /**
+          <p>
+          @attr description
+           Inner padding between the left edge of the Card and children of the CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:contentPaddingLeft
+        */
+        public static final int CardView_contentPaddingLeft = 7;
+        /**
+          <p>
+          @attr description
+           Inner padding between the right edge of the Card and children of the CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:contentPaddingRight
+        */
+        public static final int CardView_contentPaddingRight = 8;
+        /**
+          <p>
+          @attr description
+           Inner padding between the top edge of the Card and children of the CardView. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:contentPaddingTop
+        */
+        public static final int CardView_contentPaddingTop = 9;
+        /** Attributes that can be used with a CollapsingAppBarLayout_LayoutParams.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseMode dropgrade.dropgrade:layout_collapseMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier dropgrade.dropgrade:layout_collapseParallaxMultiplier}</code></td><td> The multiplier used when layout_collapseMode is set to 'parallax'.</td></tr>
+           </table>
+           @see #CollapsingAppBarLayout_LayoutParams_layout_collapseMode
+           @see #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier
+         */
+        public static final int[] CollapsingAppBarLayout_LayoutParams = {
+            0x7f01010a, 0x7f01010b
+        };
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#layout_collapseMode}
+          attribute's value can be found in the {@link #CollapsingAppBarLayout_LayoutParams} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td> The view will act as normal with no collapsing behavior. </td></tr>
+<tr><td><code>pin</code></td><td>1</td><td> The view will pin in place. </td></tr>
+<tr><td><code>parallax</code></td><td>2</td><td> The view will scroll in a parallax fashion. See the
+                 layout_collapseParallaxMultiplier attribute to change the multiplier. </td></tr>
+</table>
+          @attr name dropgrade.dropgrade:layout_collapseMode
+        */
+        public static final int CollapsingAppBarLayout_LayoutParams_layout_collapseMode = 0;
+        /**
+          <p>
+          @attr description
+           The multiplier used when layout_collapseMode is set to 'parallax'. The value should
+             be between 0.0 and 1.0. 
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:layout_collapseParallaxMultiplier
+        */
+        public static final int CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier = 1;
+        /** Attributes that can be used with a CollapsingToolbarLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleGravity dropgrade.dropgrade:collapsedTitleGravity}</code></td><td> Specifies how the title should be positioned when collapsed.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleTextAppearance dropgrade.dropgrade:collapsedTitleTextAppearance}</code></td><td> The text appearance of the CollapsingToolbarLayouts title when it is fully
+             'collapsed' </td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_contentScrim dropgrade.dropgrade:contentScrim}</code></td><td> The drawable to use as a scrim on top of the CollapsingToolbarLayouts content when
+             it has been scrolled sufficiently off screen.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleGravity dropgrade.dropgrade:expandedTitleGravity}</code></td><td> Specifies how the title should be positioned when expanded.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMargin dropgrade.dropgrade:expandedTitleMargin}</code></td><td>  Specifies extra space on the start, top, end and bottom
+              sides of the the expanded title text.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginBottom dropgrade.dropgrade:expandedTitleMarginBottom}</code></td><td>  Specifies extra space on the bottom side of the the expanded title text.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginEnd dropgrade.dropgrade:expandedTitleMarginEnd}</code></td><td>  Specifies extra space on the end side of the the expanded title text.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginStart dropgrade.dropgrade:expandedTitleMarginStart}</code></td><td>  Specifies extra space on the start side of the the expanded title text.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginTop dropgrade.dropgrade:expandedTitleMarginTop}</code></td><td>  Specifies extra space on the top side of the the expanded title text.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleTextAppearance dropgrade.dropgrade:expandedTitleTextAppearance}</code></td><td> The text appearance of the CollapsingToolbarLayout's title when it is fully
+             'expanded' </td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_statusBarScrim dropgrade.dropgrade:statusBarScrim}</code></td><td> The drawable to use as a scrim for the status bar content when the
+             CollapsingToolbarLayout has been scrolled sufficiently off screen.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_title dropgrade.dropgrade:title}</code></td><td> The title to show when titleEnabled is set to true.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_titleEnabled dropgrade.dropgrade:titleEnabled}</code></td><td> Whether the CollapsingToolbarLayout should draw its own shrinking/growing title.</td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_toolbarId dropgrade.dropgrade:toolbarId}</code></td><td> The id of the primary Toolbar child that you wish to use for the purpose of collapsing.</td></tr>
+           </table>
+           @see #CollapsingToolbarLayout_collapsedTitleGravity
+           @see #CollapsingToolbarLayout_collapsedTitleTextAppearance
+           @see #CollapsingToolbarLayout_contentScrim
+           @see #CollapsingToolbarLayout_expandedTitleGravity
+           @see #CollapsingToolbarLayout_expandedTitleMargin
+           @see #CollapsingToolbarLayout_expandedTitleMarginBottom
+           @see #CollapsingToolbarLayout_expandedTitleMarginEnd
+           @see #CollapsingToolbarLayout_expandedTitleMarginStart
+           @see #CollapsingToolbarLayout_expandedTitleMarginTop
+           @see #CollapsingToolbarLayout_expandedTitleTextAppearance
+           @see #CollapsingToolbarLayout_statusBarScrim
+           @see #CollapsingToolbarLayout_title
+           @see #CollapsingToolbarLayout_titleEnabled
+           @see #CollapsingToolbarLayout_toolbarId
+         */
+        public static final int[] CollapsingToolbarLayout = {
+            0x7f010000, 0x7f0100fd, 0x7f0100fe, 0x7f0100ff,
+            0x7f010100, 0x7f010101, 0x7f010102, 0x7f010103,
+            0x7f010104, 0x7f010105, 0x7f010106, 0x7f010107,
+            0x7f010108, 0x7f010109
+        };
+        /**
+          <p>
+          @attr description
+           Specifies how the title should be positioned when collapsed. 
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0x30</td><td> Push title to the top of its container, not changing its size. </td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td> Push title to the bottom of its container, not changing its size. </td></tr>
+<tr><td><code>left</code></td><td>0x03</td><td> Push title to the left of its container, not changing its size. </td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td> Push title to the right of its container, not changing its size. </td></tr>
+<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place title in the vertical center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the title if needed so it completely fills its container. </td></tr>
+<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place title in the horizontal center of its container, not changing its size. </td></tr>
+<tr><td><code>center</code></td><td>0x11</td><td> Place the title in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
+<tr><td><code>start</code></td><td>0x00800003</td><td> Push title to the beginning of its container, not changing its size. </td></tr>
+<tr><td><code>end</code></td><td>0x00800005</td><td> Push title to the end of its container, not changing its size. </td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:collapsedTitleGravity
+        */
+        public static final int CollapsingToolbarLayout_collapsedTitleGravity = 11;
+        /**
+          <p>
+          @attr description
+           The text appearance of the CollapsingToolbarLayouts title when it is fully
+             'collapsed' 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:collapsedTitleTextAppearance
+        */
+        public static final int CollapsingToolbarLayout_collapsedTitleTextAppearance = 7;
+        /**
+          <p>
+          @attr description
+           The drawable to use as a scrim on top of the CollapsingToolbarLayouts content when
+             it has been scrolled sufficiently off screen. 
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:contentScrim
+        */
+        public static final int CollapsingToolbarLayout_contentScrim = 8;
+        /**
+          <p>
+          @attr description
+           Specifies how the title should be positioned when expanded. 
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0x30</td><td> Push title to the top of its container, not changing its size. </td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td> Push title to the bottom of its container, not changing its size. </td></tr>
+<tr><td><code>left</code></td><td>0x03</td><td> Push title to the left of its container, not changing its size. </td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td> Push title to the right of its container, not changing its size. </td></tr>
+<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place title in the vertical center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the title if needed so it completely fills its container. </td></tr>
+<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place title in the horizontal center of its container, not changing its size. </td></tr>
+<tr><td><code>center</code></td><td>0x11</td><td> Place the title in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
+<tr><td><code>start</code></td><td>0x00800003</td><td> Push title to the beginning of its container, not changing its size. </td></tr>
+<tr><td><code>end</code></td><td>0x00800005</td><td> Push title to the end of its container, not changing its size. </td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expandedTitleGravity
+        */
+        public static final int CollapsingToolbarLayout_expandedTitleGravity = 12;
+        /**
+          <p>
+          @attr description
+            Specifies extra space on the start, top, end and bottom
+              sides of the the expanded title text. Margin values should be positive. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expandedTitleMargin
+        */
+        public static final int CollapsingToolbarLayout_expandedTitleMargin = 1;
+        /**
+          <p>
+          @attr description
+            Specifies extra space on the bottom side of the the expanded title text.
+              Margin values should be positive. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expandedTitleMarginBottom
+        */
+        public static final int CollapsingToolbarLayout_expandedTitleMarginBottom = 5;
+        /**
+          <p>
+          @attr description
+            Specifies extra space on the end side of the the expanded title text.
+              Margin values should be positive. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expandedTitleMarginEnd
+        */
+        public static final int CollapsingToolbarLayout_expandedTitleMarginEnd = 4;
+        /**
+          <p>
+          @attr description
+            Specifies extra space on the start side of the the expanded title text.
+              Margin values should be positive. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expandedTitleMarginStart
+        */
+        public static final int CollapsingToolbarLayout_expandedTitleMarginStart = 2;
+        /**
+          <p>
+          @attr description
+            Specifies extra space on the top side of the the expanded title text.
+              Margin values should be positive. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expandedTitleMarginTop
+        */
+        public static final int CollapsingToolbarLayout_expandedTitleMarginTop = 3;
+        /**
+          <p>
+          @attr description
+           The text appearance of the CollapsingToolbarLayout's title when it is fully
+             'expanded' 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:expandedTitleTextAppearance
+        */
+        public static final int CollapsingToolbarLayout_expandedTitleTextAppearance = 6;
+        /**
+          <p>
+          @attr description
+           The drawable to use as a scrim for the status bar content when the
+             CollapsingToolbarLayout has been scrolled sufficiently off screen. Only works on
+             Lollipop with the correct setup. 
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:statusBarScrim
+        */
+        public static final int CollapsingToolbarLayout_statusBarScrim = 9;
+        /**
+          <p>
+          @attr description
+           The title to show when titleEnabled is set to true. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:title
+        */
+        public static final int CollapsingToolbarLayout_title = 0;
+        /**
+          <p>
+          @attr description
+           Whether the CollapsingToolbarLayout should draw its own shrinking/growing title. 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:titleEnabled
+        */
+        public static final int CollapsingToolbarLayout_titleEnabled = 13;
+        /**
+          <p>
+          @attr description
+           The id of the primary Toolbar child that you wish to use for the purpose of collapsing.
+             If you do not set this then the first Toolbar child found will be used. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:toolbarId
+        */
+        public static final int CollapsingToolbarLayout_toolbarId = 10;
         /** Attributes that can be used with a CompoundButton.
            <p>Includes the following attributes:</p>
            <table>
@@ -3609,6 +5706,165 @@ containing a value of this type.
           @attr name dropgrade.dropgrade:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
+        /** Attributes that can be used with a CoordinatorLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CoordinatorLayout_keylines dropgrade.dropgrade:keylines}</code></td><td> A reference to an array of integers representing the
+             locations of horizontal keylines in dp from the starting edge.</td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_statusBarBackground dropgrade.dropgrade:statusBarBackground}</code></td><td> Drawable to display behind the status bar when the view is set to draw behind it.</td></tr>
+           </table>
+           @see #CoordinatorLayout_keylines
+           @see #CoordinatorLayout_statusBarBackground
+         */
+        public static final int[] CoordinatorLayout = {
+            0x7f0100ea, 0x7f0100eb
+        };
+        /**
+          <p>
+          @attr description
+           A reference to an array of integers representing the
+             locations of horizontal keylines in dp from the starting edge.
+             Child views can refer to these keylines for alignment using
+             layout_keyline="index" where index is a 0-based index into
+             this array. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:keylines
+        */
+        public static final int CoordinatorLayout_keylines = 0;
+        /**
+          <p>
+          @attr description
+           Drawable to display behind the status bar when the view is set to draw behind it. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:statusBarBackground
+        */
+        public static final int CoordinatorLayout_statusBarBackground = 1;
+        /** Attributes that can be used with a CoordinatorLayout_LayoutParams.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchor dropgrade.dropgrade:layout_anchor}</code></td><td> The id of an anchor view that this view should position relative to.</td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchorGravity dropgrade.dropgrade:layout_anchorGravity}</code></td><td> Specifies how an object should position relative to an anchor, on both the X and Y axes,
+             within its parent's bounds.</td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_behavior dropgrade.dropgrade:layout_behavior}</code></td><td> The class name of a Behavior class defining special runtime behavior
+             for this child view.</td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_keyline dropgrade.dropgrade:layout_keyline}</code></td><td> The index of a keyline this view should position relative to.</td></tr>
+           </table>
+           @see #CoordinatorLayout_LayoutParams_android_layout_gravity
+           @see #CoordinatorLayout_LayoutParams_layout_anchor
+           @see #CoordinatorLayout_LayoutParams_layout_anchorGravity
+           @see #CoordinatorLayout_LayoutParams_layout_behavior
+           @see #CoordinatorLayout_LayoutParams_layout_keyline
+         */
+        public static final int[] CoordinatorLayout_LayoutParams = {
+            0x010100b3, 0x7f0100ec, 0x7f0100ed, 0x7f0100ee,
+            0x7f0100ef
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
+          attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
+          @attr name android:layout_gravity
+        */
+        public static final int CoordinatorLayout_LayoutParams_android_layout_gravity = 0;
+        /**
+          <p>
+          @attr description
+           The id of an anchor view that this view should position relative to. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:layout_anchor
+        */
+        public static final int CoordinatorLayout_LayoutParams_layout_anchor = 2;
+        /**
+          <p>
+          @attr description
+           Specifies how an object should position relative to an anchor, on both the X and Y axes,
+             within its parent's bounds.  
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0x30</td><td> Push object to the top of its container, not changing its size. </td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td> Push object to the bottom of its container, not changing its size. </td></tr>
+<tr><td><code>left</code></td><td>0x03</td><td> Push object to the left of its container, not changing its size. </td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td> Push object to the right of its container, not changing its size. </td></tr>
+<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place object in the vertical center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the object if needed so it completely fills its container. </td></tr>
+<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place object in the horizontal center of its container, not changing its size. </td></tr>
+<tr><td><code>fill_horizontal</code></td><td>0x07</td><td> Grow the horizontal size of the object if needed so it completely fills its container. </td></tr>
+<tr><td><code>center</code></td><td>0x11</td><td> Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
+<tr><td><code>fill</code></td><td>0x77</td><td> Grow the horizontal and vertical size of the object if needed so it completely fills its container. </td></tr>
+<tr><td><code>clip_vertical</code></td><td>0x80</td><td> Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. </td></tr>
+<tr><td><code>clip_horizontal</code></td><td>0x08</td><td> Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. </td></tr>
+<tr><td><code>start</code></td><td>0x00800003</td><td> Push object to the beginning of its container, not changing its size. </td></tr>
+<tr><td><code>end</code></td><td>0x00800005</td><td> Push object to the end of its container, not changing its size. </td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:layout_anchorGravity
+        */
+        public static final int CoordinatorLayout_LayoutParams_layout_anchorGravity = 4;
+        /**
+          <p>
+          @attr description
+           The class name of a Behavior class defining special runtime behavior
+             for this child view. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:layout_behavior
+        */
+        public static final int CoordinatorLayout_LayoutParams_layout_behavior = 1;
+        /**
+          <p>
+          @attr description
+           The index of a keyline this view should position relative to.
+             android:layout_gravity will affect how the view aligns to the
+             specified keyline. 
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:layout_keyline
+        */
+        public static final int CoordinatorLayout_LayoutParams_layout_keyline = 3;
         /** Attributes that can be used with a DrawerArrowToggle.
            <p>Includes the following attributes:</p>
            <table>
@@ -3778,6 +6034,219 @@ containing a value of this type.
           @attr name dropgrade.dropgrade:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
+        /** Attributes that can be used with a FloatingActionButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FloatingActionButton_android_background android:background}</code></td><td> Background for the FloatingActionButton </td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTint dropgrade.dropgrade:backgroundTint}</code></td><td> Tint to apply to the background.</td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTintMode dropgrade.dropgrade:backgroundTintMode}</code></td><td> Blending mode used to apply the background tint.</td></tr>
+           <tr><td><code>{@link #FloatingActionButton_borderWidth dropgrade.dropgrade:borderWidth}</code></td><td> The width of the border around the FAB.</td></tr>
+           <tr><td><code>{@link #FloatingActionButton_elevation dropgrade.dropgrade:elevation}</code></td><td> Elevation value for the FAB </td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fabSize dropgrade.dropgrade:fabSize}</code></td><td> Size for the FAB.</td></tr>
+           <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ dropgrade.dropgrade:pressedTranslationZ}</code></td><td> TranslationZ value for the FAB when pressed</td></tr>
+           <tr><td><code>{@link #FloatingActionButton_rippleColor dropgrade.dropgrade:rippleColor}</code></td><td> Ripple color for the FAB.</td></tr>
+           </table>
+           @see #FloatingActionButton_android_background
+           @see #FloatingActionButton_backgroundTint
+           @see #FloatingActionButton_backgroundTintMode
+           @see #FloatingActionButton_borderWidth
+           @see #FloatingActionButton_elevation
+           @see #FloatingActionButton_fabSize
+           @see #FloatingActionButton_pressedTranslationZ
+           @see #FloatingActionButton_rippleColor
+         */
+        public static final int[] FloatingActionButton = {
+            0x010100d4, 0x7f010085, 0x7f01008b, 0x7f01008c,
+            0x7f0100ce, 0x7f0100cf, 0x7f0100d0, 0x7f0100d1
+        };
+        /**
+          <p>
+          @attr description
+           Background for the FloatingActionButton 
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#background}.
+          @attr name android:background
+        */
+        public static final int FloatingActionButton_android_background = 0;
+        /**
+          <p>
+          @attr description
+           Tint to apply to the background. 
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:backgroundTint
+        */
+        public static final int FloatingActionButton_backgroundTint = 2;
+        /**
+          <p>
+          @attr description
+           Blending mode used to apply the background tint. 
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>src_over</code></td><td>3</td><td> The tint is drawn on top of the drawable.
+                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] </td></tr>
+<tr><td><code>src_in</code></td><td>5</td><td> The tint is masked by the alpha channel of the drawable. The drawable’s
+                 color channels are thrown out. [Sa * Da, Sc * Da] </td></tr>
+<tr><td><code>src_atop</code></td><td>9</td><td> The tint is drawn above the drawable, but with the drawable’s alpha
+                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] </td></tr>
+<tr><td><code>multiply</code></td><td>14</td><td> Multiplies the color and alpha channels of the drawable with those of
+                 the tint. [Sa * Da, Sc * Dc] </td></tr>
+<tr><td><code>screen</code></td><td>15</td><td> [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] </td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:backgroundTintMode
+        */
+        public static final int FloatingActionButton_backgroundTintMode = 3;
+        /**
+          <p>
+          @attr description
+           The width of the border around the FAB. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:borderWidth
+        */
+        public static final int FloatingActionButton_borderWidth = 7;
+        /**
+          <p>
+          @attr description
+           Elevation value for the FAB 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:elevation
+        */
+        public static final int FloatingActionButton_elevation = 1;
+        /**
+          <p>
+          @attr description
+           Size for the FAB. 
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:fabSize
+        */
+        public static final int FloatingActionButton_fabSize = 5;
+        /**
+          <p>
+          @attr description
+           TranslationZ value for the FAB when pressed
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:pressedTranslationZ
+        */
+        public static final int FloatingActionButton_pressedTranslationZ = 6;
+        /**
+          <p>
+          @attr description
+           Ripple color for the FAB. 
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:rippleColor
+        */
+        public static final int FloatingActionButton_rippleColor = 4;
+        /** Attributes that can be used with a ForegroundLinearLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ForegroundLinearLayout_android_foreground android:foreground}</code></td><td></td></tr>
+           <tr><td><code>{@link #ForegroundLinearLayout_android_foregroundGravity android:foregroundGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #ForegroundLinearLayout_foregroundInsidePadding dropgrade.dropgrade:foregroundInsidePadding}</code></td><td></td></tr>
+           </table>
+           @see #ForegroundLinearLayout_android_foreground
+           @see #ForegroundLinearLayout_android_foregroundGravity
+           @see #ForegroundLinearLayout_foregroundInsidePadding
+         */
+        public static final int[] ForegroundLinearLayout = {
+            0x01010109, 0x01010200, 0x7f0100d9
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#foreground}
+          attribute's value can be found in the {@link #ForegroundLinearLayout} array.
+          @attr name android:foreground
+        */
+        public static final int ForegroundLinearLayout_android_foreground = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#foregroundGravity}
+          attribute's value can be found in the {@link #ForegroundLinearLayout} array.
+          @attr name android:foregroundGravity
+        */
+        public static final int ForegroundLinearLayout_android_foregroundGravity = 1;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#foregroundInsidePadding}
+          attribute's value can be found in the {@link #ForegroundLinearLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:foregroundInsidePadding
+        */
+        public static final int ForegroundLinearLayout_foregroundInsidePadding = 2;
         /** Attributes that can be used with a LinearLayoutCompat.
            <p>Includes the following attributes:</p>
            <table>
@@ -4457,6 +6926,149 @@ containing a value of this type.
           @attr name dropgrade.dropgrade:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
+        /** Attributes that can be used with a NavigationView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #NavigationView_android_background android:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_android_fitsSystemWindows android:fitsSystemWindows}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_elevation dropgrade.dropgrade:elevation}</code></td><td> Elevation for the action bar itself </td></tr>
+           <tr><td><code>{@link #NavigationView_headerLayout dropgrade.dropgrade:headerLayout}</code></td><td> Layout resource to inflate as the header </td></tr>
+           <tr><td><code>{@link #NavigationView_itemBackground dropgrade.dropgrade:itemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemIconTint dropgrade.dropgrade:itemIconTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemTextAppearance dropgrade.dropgrade:itemTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemTextColor dropgrade.dropgrade:itemTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_menu dropgrade.dropgrade:menu}</code></td><td> The menu resource to inflate and populate items from.</td></tr>
+           </table>
+           @see #NavigationView_android_background
+           @see #NavigationView_android_fitsSystemWindows
+           @see #NavigationView_android_maxWidth
+           @see #NavigationView_elevation
+           @see #NavigationView_headerLayout
+           @see #NavigationView_itemBackground
+           @see #NavigationView_itemIconTint
+           @see #NavigationView_itemTextAppearance
+           @see #NavigationView_itemTextColor
+           @see #NavigationView_menu
+         */
+        public static final int[] NavigationView = {
+            0x010100d4, 0x010100dd, 0x0101011f, 0x7f010085,
+            0x7f0100d3, 0x7f0100d4, 0x7f0100d5, 0x7f0100d6,
+            0x7f0100d7, 0x7f0100d8
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#background}
+          attribute's value can be found in the {@link #NavigationView} array.
+          @attr name android:background
+        */
+        public static final int NavigationView_android_background = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#fitsSystemWindows}
+          attribute's value can be found in the {@link #NavigationView} array.
+          @attr name android:fitsSystemWindows
+        */
+        public static final int NavigationView_android_fitsSystemWindows = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
+          attribute's value can be found in the {@link #NavigationView} array.
+          @attr name android:maxWidth
+        */
+        public static final int NavigationView_android_maxWidth = 2;
+        /**
+          <p>
+          @attr description
+           Elevation for the action bar itself 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:elevation
+        */
+        public static final int NavigationView_elevation = 3;
+        /**
+          <p>
+          @attr description
+           Layout resource to inflate as the header 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:headerLayout
+        */
+        public static final int NavigationView_headerLayout = 9;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#itemBackground}
+          attribute's value can be found in the {@link #NavigationView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name dropgrade.dropgrade:itemBackground
+        */
+        public static final int NavigationView_itemBackground = 7;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#itemIconTint}
+          attribute's value can be found in the {@link #NavigationView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:itemIconTint
+        */
+        public static final int NavigationView_itemIconTint = 5;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#itemTextAppearance}
+          attribute's value can be found in the {@link #NavigationView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name dropgrade.dropgrade:itemTextAppearance
+        */
+        public static final int NavigationView_itemTextAppearance = 8;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#itemTextColor}
+          attribute's value can be found in the {@link #NavigationView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:itemTextColor
+        */
+        public static final int NavigationView_itemTextColor = 6;
+        /**
+          <p>
+          @attr description
+           The menu resource to inflate and populate items from. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:menu
+        */
+        public static final int NavigationView_menu = 4;
         /** Attributes that can be used with a PopupWindow.
            <p>Includes the following attributes:</p>
            <table>
@@ -4523,6 +7135,156 @@ containing a value of this type.
           @attr name dropgrade.dropgrade:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
+        /** Attributes that can be used with a RecyclerView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #RecyclerView_android_orientation android:orientation}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_layoutManager dropgrade.dropgrade:layoutManager}</code></td><td> Class name of the Layout Manager to be used.</td></tr>
+           <tr><td><code>{@link #RecyclerView_reverseLayout dropgrade.dropgrade:reverseLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_spanCount dropgrade.dropgrade:spanCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_stackFromEnd dropgrade.dropgrade:stackFromEnd}</code></td><td></td></tr>
+           </table>
+           @see #RecyclerView_android_orientation
+           @see #RecyclerView_layoutManager
+           @see #RecyclerView_reverseLayout
+           @see #RecyclerView_spanCount
+           @see #RecyclerView_stackFromEnd
+         */
+        public static final int[] RecyclerView = {
+            0x010100c4, 0x7f01010c, 0x7f01010d, 0x7f01010e,
+            0x7f01010f
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#orientation}
+          attribute's value can be found in the {@link #RecyclerView} array.
+          @attr name android:orientation
+        */
+        public static final int RecyclerView_android_orientation = 0;
+        /**
+          <p>
+          @attr description
+           Class name of the Layout Manager to be used.
+        <p/>
+        The class must extend android.support.v7.widget.RecyclerView$LayoutManager
+        and have either a default constructor or constructor with the signature
+        (android.content.Context, android.util.AttributeSet, int, int).
+         <p/>
+         If the name starts with a '.', application package is prefixed.
+         Else, if the name contains a '.', the classname is assumed to be a full class name.
+         Else, the recycler view package name (android.support.v7.widget) is prefixed. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:layoutManager
+        */
+        public static final int RecyclerView_layoutManager = 1;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#reverseLayout}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:reverseLayout
+        */
+        public static final int RecyclerView_reverseLayout = 3;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#spanCount}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:spanCount
+        */
+        public static final int RecyclerView_spanCount = 2;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#stackFromEnd}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:stackFromEnd
+        */
+        public static final int RecyclerView_stackFromEnd = 4;
+        /** Attributes that can be used with a ScrimInsetsFrameLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ScrimInsetsFrameLayout_insetForeground dropgrade.dropgrade:insetForeground}</code></td><td></td></tr>
+           </table>
+           @see #ScrimInsetsFrameLayout_insetForeground
+         */
+        public static final int[] ScrimInsetsFrameLayout = {
+            0x7f0100d2
+        };
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#insetForeground}
+          attribute's value can be found in the {@link #ScrimInsetsFrameLayout} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name dropgrade.dropgrade:insetForeground
+        */
+        public static final int ScrimInsetsFrameLayout_insetForeground = 0;
+        /** Attributes that can be used with a ScrollingViewBehavior_Params.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ScrollingViewBehavior_Params_behavior_overlapTop dropgrade.dropgrade:behavior_overlapTop}</code></td><td> The amount that the scrolling view should overlap the bottom of any AppBarLayout </td></tr>
+           </table>
+           @see #ScrollingViewBehavior_Params_behavior_overlapTop
+         */
+        public static final int[] ScrollingViewBehavior_Params = {
+            0x7f0100fc
+        };
+        /**
+          <p>
+          @attr description
+           The amount that the scrolling view should overlap the bottom of any AppBarLayout 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:behavior_overlapTop
+        */
+        public static final int ScrollingViewBehavior_Params_behavior_overlapTop = 0;
         /** Attributes that can be used with a SearchView.
            <p>Includes the following attributes:</p>
            <table>
@@ -4776,6 +7538,63 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name dropgrade.dropgrade:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
+        /** Attributes that can be used with a SnackbarLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SnackbarLayout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SnackbarLayout_elevation dropgrade.dropgrade:elevation}</code></td><td> Elevation for the action bar itself </td></tr>
+           <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth dropgrade.dropgrade:maxActionInlineWidth}</code></td><td></td></tr>
+           </table>
+           @see #SnackbarLayout_android_maxWidth
+           @see #SnackbarLayout_elevation
+           @see #SnackbarLayout_maxActionInlineWidth
+         */
+        public static final int[] SnackbarLayout = {
+            0x0101011f, 0x7f010085, 0x7f0100f8
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
+          attribute's value can be found in the {@link #SnackbarLayout} array.
+          @attr name android:maxWidth
+        */
+        public static final int SnackbarLayout_android_maxWidth = 0;
+        /**
+          <p>
+          @attr description
+           Elevation for the action bar itself 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:elevation
+        */
+        public static final int SnackbarLayout_elevation = 1;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#maxActionInlineWidth}
+          attribute's value can be found in the {@link #SnackbarLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:maxActionInlineWidth
+        */
+        public static final int SnackbarLayout_maxActionInlineWidth = 2;
         /** Attributes that can be used with a Spinner.
            <p>Includes the following attributes:</p>
            <table>
@@ -5004,6 +7823,299 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name dropgrade.dropgrade:track
         */
         public static final int SwitchCompat_track = 3;
+        /** Attributes that can be used with a TabLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TabLayout_tabBackground dropgrade.dropgrade:tabBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabContentStart dropgrade.dropgrade:tabContentStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabGravity dropgrade.dropgrade:tabGravity}</code></td><td> Standard gravity constant that a child supplies to its parent.</td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorColor dropgrade.dropgrade:tabIndicatorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorHeight dropgrade.dropgrade:tabIndicatorHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMaxWidth dropgrade.dropgrade:tabMaxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMinWidth dropgrade.dropgrade:tabMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMode dropgrade.dropgrade:tabMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPadding dropgrade.dropgrade:tabPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingBottom dropgrade.dropgrade:tabPaddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingEnd dropgrade.dropgrade:tabPaddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingStart dropgrade.dropgrade:tabPaddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingTop dropgrade.dropgrade:tabPaddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabSelectedTextColor dropgrade.dropgrade:tabSelectedTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextAppearance dropgrade.dropgrade:tabTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextColor dropgrade.dropgrade:tabTextColor}</code></td><td></td></tr>
+           </table>
+           @see #TabLayout_tabBackground
+           @see #TabLayout_tabContentStart
+           @see #TabLayout_tabGravity
+           @see #TabLayout_tabIndicatorColor
+           @see #TabLayout_tabIndicatorHeight
+           @see #TabLayout_tabMaxWidth
+           @see #TabLayout_tabMinWidth
+           @see #TabLayout_tabMode
+           @see #TabLayout_tabPadding
+           @see #TabLayout_tabPaddingBottom
+           @see #TabLayout_tabPaddingEnd
+           @see #TabLayout_tabPaddingStart
+           @see #TabLayout_tabPaddingTop
+           @see #TabLayout_tabSelectedTextColor
+           @see #TabLayout_tabTextAppearance
+           @see #TabLayout_tabTextColor
+         */
+        public static final int[] TabLayout = {
+            0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd,
+            0x7f0100de, 0x7f0100df, 0x7f0100e0, 0x7f0100e1,
+            0x7f0100e2, 0x7f0100e3, 0x7f0100e4, 0x7f0100e5,
+            0x7f0100e6, 0x7f0100e7, 0x7f0100e8, 0x7f0100e9
+        };
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabBackground}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name dropgrade.dropgrade:tabBackground
+        */
+        public static final int TabLayout_tabBackground = 3;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabContentStart}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabContentStart
+        */
+        public static final int TabLayout_tabContentStart = 2;
+        /**
+          <p>
+          @attr description
+           Standard gravity constant that a child supplies to its parent.
+             Defines how the child view should be positioned, on both the X and Y axes,
+             within its enclosing layout. 
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fill</code></td><td>0</td><td></td></tr>
+<tr><td><code>center</code></td><td>1</td><td></td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:tabGravity
+        */
+        public static final int TabLayout_tabGravity = 5;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabIndicatorColor}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabIndicatorColor
+        */
+        public static final int TabLayout_tabIndicatorColor = 0;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabIndicatorHeight}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabIndicatorHeight
+        */
+        public static final int TabLayout_tabIndicatorHeight = 1;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabMaxWidth}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabMaxWidth
+        */
+        public static final int TabLayout_tabMaxWidth = 7;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabMinWidth}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabMinWidth
+        */
+        public static final int TabLayout_tabMinWidth = 6;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabMode}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>scrollable</code></td><td>0</td><td></td></tr>
+<tr><td><code>fixed</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name dropgrade.dropgrade:tabMode
+        */
+        public static final int TabLayout_tabMode = 4;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabPadding}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabPadding
+        */
+        public static final int TabLayout_tabPadding = 15;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabPaddingBottom}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabPaddingBottom
+        */
+        public static final int TabLayout_tabPaddingBottom = 14;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabPaddingEnd}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabPaddingEnd
+        */
+        public static final int TabLayout_tabPaddingEnd = 13;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabPaddingStart}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabPaddingStart
+        */
+        public static final int TabLayout_tabPaddingStart = 11;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabPaddingTop}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabPaddingTop
+        */
+        public static final int TabLayout_tabPaddingTop = 12;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabSelectedTextColor}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabSelectedTextColor
+        */
+        public static final int TabLayout_tabSelectedTextColor = 10;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabTextAppearance}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name dropgrade.dropgrade:tabTextAppearance
+        */
+        public static final int TabLayout_tabTextAppearance = 8;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#tabTextColor}
+          attribute's value can be found in the {@link #TabLayout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name dropgrade.dropgrade:tabTextColor
+        */
+        public static final int TabLayout_tabTextColor = 9;
         /** Attributes that can be used with a TextAppearance.
            <p>Includes the following attributes:</p>
            <table>
@@ -5096,6 +8208,164 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name dropgrade.dropgrade:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 8;
+        /** Attributes that can be used with a TextInputLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TextInputLayout_android_hint android:hint}</code></td><td> The hint to display in the floating label </td></tr>
+           <tr><td><code>{@link #TextInputLayout_android_textColorHint android:textColorHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterEnabled dropgrade.dropgrade:counterEnabled}</code></td><td> Whether the layout is laid out as if the character counter will be displayed </td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterMaxLength dropgrade.dropgrade:counterMaxLength}</code></td><td> The max length to display in the character counter </td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterOverflowTextAppearance dropgrade.dropgrade:counterOverflowTextAppearance}</code></td><td> TextAppearance of the character counter when the text is longer than the max </td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterTextAppearance dropgrade.dropgrade:counterTextAppearance}</code></td><td> TextAppearance of the character counter </td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorEnabled dropgrade.dropgrade:errorEnabled}</code></td><td> Whether the layout is laid out as if an error will be displayed </td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorTextAppearance dropgrade.dropgrade:errorTextAppearance}</code></td><td> TextAppearance of any error message displayed </td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintAnimationEnabled dropgrade.dropgrade:hintAnimationEnabled}</code></td><td> Whether to animate hint state changes.</td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintTextAppearance dropgrade.dropgrade:hintTextAppearance}</code></td><td></td></tr>
+           </table>
+           @see #TextInputLayout_android_hint
+           @see #TextInputLayout_android_textColorHint
+           @see #TextInputLayout_counterEnabled
+           @see #TextInputLayout_counterMaxLength
+           @see #TextInputLayout_counterOverflowTextAppearance
+           @see #TextInputLayout_counterTextAppearance
+           @see #TextInputLayout_errorEnabled
+           @see #TextInputLayout_errorTextAppearance
+           @see #TextInputLayout_hintAnimationEnabled
+           @see #TextInputLayout_hintTextAppearance
+         */
+        public static final int[] TextInputLayout = {
+            0x0101009a, 0x01010150, 0x7f0100f0, 0x7f0100f1,
+            0x7f0100f2, 0x7f0100f3, 0x7f0100f4, 0x7f0100f5,
+            0x7f0100f6, 0x7f0100f7
+        };
+        /**
+          <p>
+          @attr description
+           The hint to display in the floating label 
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#hint}.
+          @attr name android:hint
+        */
+        public static final int TextInputLayout_android_hint = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textColorHint}
+          attribute's value can be found in the {@link #TextInputLayout} array.
+          @attr name android:textColorHint
+        */
+        public static final int TextInputLayout_android_textColorHint = 0;
+        /**
+          <p>
+          @attr description
+           Whether the layout is laid out as if the character counter will be displayed 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:counterEnabled
+        */
+        public static final int TextInputLayout_counterEnabled = 5;
+        /**
+          <p>
+          @attr description
+           The max length to display in the character counter 
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:counterMaxLength
+        */
+        public static final int TextInputLayout_counterMaxLength = 6;
+        /**
+          <p>
+          @attr description
+           TextAppearance of the character counter when the text is longer than the max 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:counterOverflowTextAppearance
+        */
+        public static final int TextInputLayout_counterOverflowTextAppearance = 8;
+        /**
+          <p>
+          @attr description
+           TextAppearance of the character counter 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:counterTextAppearance
+        */
+        public static final int TextInputLayout_counterTextAppearance = 7;
+        /**
+          <p>
+          @attr description
+           Whether the layout is laid out as if an error will be displayed 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:errorEnabled
+        */
+        public static final int TextInputLayout_errorEnabled = 3;
+        /**
+          <p>
+          @attr description
+           TextAppearance of any error message displayed 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:errorTextAppearance
+        */
+        public static final int TextInputLayout_errorTextAppearance = 4;
+        /**
+          <p>
+          @attr description
+           Whether to animate hint state changes. 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name dropgrade.dropgrade:hintAnimationEnabled
+        */
+        public static final int TextInputLayout_hintAnimationEnabled = 9;
+        /**
+          <p>This symbol is the offset where the {@link dropgrade.dropgrade.R.attr#hintTextAppearance}
+          attribute's value can be found in the {@link #TextInputLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name dropgrade.dropgrade:hintTextAppearance
+        */
+        public static final int TextInputLayout_hintTextAppearance = 2;
         /**  These are the standard attributes that make up a complete theme. 
            <p>Includes the following attributes:</p>
            <table>

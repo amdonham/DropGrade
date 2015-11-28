@@ -5,6 +5,8 @@ import java.util.List;
 
 /**
  * Created by Alan on 9/15/2015.
+ * 
+ * Edited by Madison on 11/24/2015
  */
 
 public class User
@@ -15,16 +17,30 @@ public class User
      */
 
     /**Attributes**/
-    private
+    
         String userName;
         String password;
         String emailAddress;
+        String Name;
         List<Course> Courses;
+        List<CourseWork> CourseWork;
+        
 
 
     /**Methods**/
 
-    public User(String name, String pass, String email) {this.userName = name; this.password = pass; this.emailAddress = email; Courses = new ArrayList<Course>();}
+    public User(){
+    	Courses = new ArrayList<Course>();
+    	CourseWork = new ArrayList<CourseWork>();
+    }
+    public User(String username,String name, String pass, String email) {
+    	this.userName = username; 
+    	this.password = pass; 
+    	this.emailAddress = email; 
+    	this.Name = name;
+        	Courses = new ArrayList<Course>();
+        	CourseWork = new ArrayList<CourseWork>();
+    	}
 
     public void setUserName(String name)
     {
@@ -35,6 +51,17 @@ public class User
     {
         return userName;
     }
+    
+    public void setName(String name)
+    {
+        this.Name = name;
+    }
+
+    public String getName()
+    {
+        return Name;
+    }
+
 
     public void setPassword(String pw)
     {
@@ -82,8 +109,11 @@ public class User
         }
     }
 
+
     public List<Course> getCourses()
     {
         return Courses;
     }
+    
+   
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Holds a class item for the classes list. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/class_container"
+    android:layout_marginBottom="5dp">
+
+    <!--  The class name. -->
+	<TextView
+	    android:id="@+id/className"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:text="@string/className"
+	    android:paddingTop="10dp"
+	    android:textSize="20sp"
+	    android:textColor="#000"
+	    android:paddingLeft="10dp" />
+	
+	<!--  The professor's name. -->
+	<TextView
+	    android:id="@+id/professor"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/className"
+	    android:text="@string/addProfessor"
+	    android:textSize="18sp"
+	    android:textColor="#242B24"
+	    android:paddingTop="10dp"
+	    android:paddingLeft="10dp"/>
+
+	
+	
+
+</RelativeLayout>

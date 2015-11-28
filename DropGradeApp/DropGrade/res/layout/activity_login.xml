@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:background = "#7e2c2c"
+     tools:context="dropgrade.dropgrade.LoginActivity">
+
+    <!-- Login progress -->
+	<ImageView
+        android:id="@+id/imageView1"
+        android:layout_width = "match_parent"
+		android:layout_height= "165dp"
+		android:background="@drawable/chalkboard_black"
+        android:src="@drawable/logo24" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity ="center">
+
+    <LinearLayout android:id="@+id/email_login_form" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background = "#7e2c2c"
+        android:cursorVisible="false"
+        >
+
+
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Already Registered then login"
+            android:id="@+id/textView2"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal" />
+
+        
+          
+
+        <EditText android:id="@+id/username" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="@string/username"
+            android:inputType="text" android:maxLines="1"
+            android:textColor="#FFFFFF"
+            android:singleLine="true"/>
+        
+
+            <EditText android:id="@+id/password" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:maxLines="1" android:singleLine="true" />
+
+
+        <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/action_sign_in"
+            
+            android:typeface="serif"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not yet registered?"
+            android:id="@+id/textView"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:typeface="serif" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            
+            android:onClick="createprofile"
+            android:id="@+id/buttonRegister"
+            android:layout_gravity="center_horizontal" 
+            android:typeface="serif"/>
+
+        <Button
+            android:id="@+id/forgotpw"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="@string/forgot_pw"
+            android:text="@string/forgot_pw"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:typeface="serif" />
+
+		</LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/courseNameEntry" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+            android:inputType="text" android:layout_toRightOf="@+id/textView" android:clickable="false"/>
+    
+    
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Course Number"
+            android:id="@+id/textView2" android:layout_below="@+id/textView" android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/courseCreditsEntry"
+            android:gravity="center"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:ems="10"
+            android:id="@+id/courseCreditsEntry"
+            android:layout_below="@+id/courseNameEntry" android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/textView2"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Course Subject"
+            android:id="@+id/textView3" android:layout_below="@+id/textView2" android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/courseGPAEntry"
+            android:gravity="center" android:layout_alignRight="@+id/textView2"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/courseGPAEntry" android:layout_below="@+id/courseCreditsEntry"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_alignParentRight="true"/>
+    
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/courseSemester" android:layout_below="@+id/textView3"
+            android:layout_toRightOf="@+id/TextView01"
+            android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/courseCreditsEntry"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="@string/course_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseSemester"
+        
+        android:gravity="center"
+        android:text="Semester"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:gravity="center"
+        android:text="Professor"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/courseS" android:layout_below="@+id/courseSemester"
+            android:layout_toRightOf="@+id/TextView02"
+            android:layout_alignParentRight="true"/>
+    
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/buttonRegister"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/cpwd"
+        android:layout_centerHorizontal="true" />
+        
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/buttonRegister"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/cpwd"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

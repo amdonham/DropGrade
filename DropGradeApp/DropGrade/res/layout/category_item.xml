@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Container for a category in the expandable list. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/category_container"
+    android:layout_marginBottom="5dp">
+    
+    
+	<!-- Holds the category name. -->	
+	<TextView
+	    android:id="@+id/category"
+	    android:layout_width="0dp"
+	    android:layout_weight=".75"
+	    android:layout_height="wrap_content"
+	    android:text="@string/categoryName"
+	    android:ellipsize="end"
+		android:singleLine="true"
+	    android:paddingTop="10dp"
+	    android:textSize="25sp"
+	    android:paddingLeft="30dp" />
+	
+	<!--  Percentage of the category. -->
+	<TextView
+	    android:id="@+id/percentage"
+	    android:layout_width="0dp"
+	    android:layout_weight=".25"
+	    android:layout_height="wrap_content"
+	    android:text="@string/score"
+	    android:textSize="25sp"
+	    android:gravity="right"
+	    android:paddingTop="10dp"
+	    android:paddingRight="10dp"/>
+
+	
+	
+
+</LinearLayout>

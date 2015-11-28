@@ -1,0 +1,19 @@
+<!--  Layout for menu if logged in. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.gradecalculator.MainActivity" >
+
+    <item
+        android:id="@+id/information"
+        android:title="@string/about"/>
+    
+    <item 
+        android:id="@+id/signOut"
+        android:title="@string/signOut"
+        android:visible="true" />
+  	<item
+        android:id="@+id/developer"
+        android:title="@string/developer"/>
+
+</menu>

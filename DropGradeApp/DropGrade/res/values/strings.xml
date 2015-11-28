@@ -9,5 +9,222 @@
     <string name="username">Username</string>
 	<string name="password">Password</string>
 	<string name="login">Login</string>
-	<string name="clickHere">Click Here!s</string>
+	<string name="clickHere">Click Here!</string>
+	<string name="enterGrade">Enter Grade</string>
+    <string name = "home">Home Page</string>
+    <string name = "userhome">Welcome to </string>
+    <string name ="Professors">List of Professors</string>
+    <string name="currentGrade">Current Grade</string>
+    <string name="whatWant">The Grade You Want</string>
+    <string name="finalWorth">Your Final is Worth</string>
+    <string name="coursepage">Courses Page</string>
+    <string name="whatNeed">What You Need on the Final</string>
+	<color name="white">#FFFFFF</color>
+	<string name="gradeacti">Grade</string>
+	<string name="searchC">Search For Course</string>
+	<string name="searchP">Search For Professor</string>
+ <string name="desired">desired</string>
+    <string name="required">required</string>
+    <string name="acquired">acquired</string>
+    <string name="courses">courses</string>
+    <string name="title_activity_courses">CoursesActivity</string>
+    <string name="title_activity_add_course">AddCourseActivity</string>
+ <string name="image">image</string>
+    <string name="title">Title</string>
+    
+    <string name="number">Number</string>
+    <string name = "name">name</string>
+    <string name = "add">+</string>
+    <string name = "add_eval">add evaluation</string>
+    <string name="title_activity_add_evaluation">AddEvaluationActivity</string>
+	<string name="email_client_error">No Email client found</string>
+    <string name="email_subject">Android Email</string>
+    <string name = "save">save</string>
+
+    <string name = "weight">weight</string>
+    <string name="title_activity_course">CourseActivity</string>
+
+    <!-- Global -->
+  
+    <!-- Course List Activity -->
+    <string name="course_list_activity_title">Courses</string>
+    <string name="course_list_activity_menu_add_course">Add Course</string>
+    <string name="course_list_activity_menu_about">About</string>
+    <string name="course_list_activity_context_menu_edit">Edit</string>
+    <string name="course_list_activity_context_menu_delete">Delete</string>
+    <string name="course_list_activity_toast_unlocked">Full Version Unlocked!</string>
+    <string name="course_list_activity_toast_billing_unavailable">Billing service unavailable. Full Version cannot be activated.</string>
+    <string name="course_list_activity_toast_full_version_refunded">Full Version purchase refunded. Full version will no longer be available.</string>
+    <string name="course_list_activity_toast_add_course_denied">Full version required to add multiple courses</string>
+    <!-- Buy Full Version Fragment -->
+    <string name="buy_full_version_fragment_buy_notice">Full version required to add more than one course or save courses between app launches</string>
+    <string name="buy_full_version_fragment_buy_button">Buy Full Version</string>
+    <!-- Course List Fragment -->
+    <string name="course_list_fragment_no_courses_notice">You don\'t have any courses yet.\nTap \"Add Course\" to add one.</string>
+    <!-- Add Course Dialog Fragment -->
+    <string name="add_course_dialog_fragment_title">New Course</string>
+    <string name="add_course_dialog_fragment_course_name">Name:</string>
+    <string name="add_course_dialog_fragment_grade_type">Grading Style:</string>
+    <string name="add_course_dialog_fragment_grade_type_point_total">Grand Point Total</string>
+    <string name="add_course_dialog_fragment_grade_type_percentage">Weighted Percentages</string>
+    <string name="add_course_dialog_fragment_create_course_button">Create Course</string>
+    <string name="add_course_dialog_fragment_cancel_button">Cancel</string>
+    <!-- Edit Course Dialog Fragment -->
+    <string name="edit_course_dialog_fragment_title">Edit Course</string>
+    <string name="edit_course_dialog_fragment_save_course_button">Save Course</string>
+    <!-- Course Activity -->
+    <string name="course_activity_menu_add_component">Add Component</string>
+    <string name="course_activity_context_menu_edit">Edit</string>
+    <string name="course_activity_context_menu_delete">Delete</string>
+    <!-- Grade Component List Fragment -->
+    <string name="grade_component_list_fragment_no_components_notice">You don\'t have any grade components yet. Tap \"Add Component\" to add one.</string>
+    <string name="grade_component_list_fragment_points_earned">Points Earned: %s</string>
+    <string name="grade_component_list_fragment_total_points">Total Points: %s</string>
+    <string name="grade_component_list_fragment_percentage_earned">Current Percentage: %s</string>
+    <string name="grade_component_list_fragment_weight">Weight: %s</string>
+    <!-- Course Overview Fragment -->
+    <string name="course_overview_fragment_overall_grade">Overall Grade: %s</string>
+    <!-- Add Grade Component Dialog -->
+    <string name="add_grade_component_dialog_title">Add Grade Component</string>
+    <string name="add_grade_component_dialog_name">Name:</string>
+    <string name="add_grade_component_dialog_total_points">Total Possible Points:</string>
+    <string name="add_grade_component_dialog_weight">Weight (percentage out of 100):</string>
+    <string name="add_grade_component_dialog_earned_points">Points Earned:</string>
+    <string name="add_grade_component_dialog_earned_percentage">Current Grade (percentage out of 100):</string>
+    <string name="add_grade_component_dialog_cancel_button">Cancel</string>
+    <string name="add_grade_component_dialog_create_button">Create</string>
+    <!-- Edit Grade Component Dialog -->
+    <string name="edit_grade_component_dialog_save_button">Save</string>
+    <!-- About Activity -->
+    <string name="about_activity_title">About</string>
+    <string name="about_activity_text">Weighted Grade Calculator is a personal project of mine. I think it is not only useful, but also the perfect sized project for demonstrating a lot of good Android development practices.\n\nAs such, I submit this app to both you, the user, and to you, the developer, as both a handy tool and an example of current Android design and development principles.\n\nThe source code for Weighted Grade Calculator is released under the MIT License and is available from the app\'s web site.\n\nAll original artwork is released under a Creative Commons License (CC BY 3.0) and is also available from the app\'s web site.\n\nCheers!</string>
+ <string name="activity_info"><u><b>Activity Info</b></u></string>
+
+    <string name="semester_list_heading">Semesters</string>
+    <string name="semester_name">Name</string>
+    <string name="course_name">Name</string>
+    <string name="credits">Credits</string>
+    <string name="optional">Optional</string>
+    <string name="gpa">GPA</string>
+    <string name="courses_list_heading">Courses</string>
+    <string name="grade">Grade</string>
+    
+       
+    <color name = "bg_color">#263038</color>
+  
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_enter">EnterActivity</string>
+    
+    <string name="prompt">Mind telling us your name?</string>
+    <string name="preference_file_key">"senioritis.PREFERENCE_FILE_KEY"</string>
+    <string name="action_info">info</string>
+    <string name="class_info"><u><b>Class Info</b></u></string>
+    <string name="breakdown"><u><b>Breakdown</b></u></string>
+    <string name="home_instructions">To add a class, tap on the add button on the bottom right of the screen.
+You will then be prompted to fill in class information.
+After tapping “enter,” your class will be added to the screen and you will be able to add/change assignments.</string>
+
+    <string name="bucket_list_instructions">To add an activity to your bucket list, tap on the add button on the bottom right of the screen.
+You will then be prompted to fill in the activity\'s name and priority level.
+After tapping “enter,” your activity will be added to the bucket list and you will be able to add/change activities.</string>
+
+    <string name="profile_instructions">This is your profile summary. To edit your preferences, tap on the edit icon next to your name.</string>
+    <string name="grades"><u><b>Grades</b></u></string>
+    <string name="graduation"><u><b>Graduation</b></u></string>
+     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name"><b><u>Personal</u></b></string>
+    <string name="assignment"><b><u>Assignment</u></b></string>
+    
+     <string-array name="grade_array">
+        <item>A+</item>
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>C-</item>
+        <item>D+</item>
+        <item>D</item>
+        <item>D-</item>
+        <item>F</item>
+    </string-array>
+    
+      <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in </string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_display">Display</string>
+    <string name="title_activity_home">homeActivity</string>
+    
+     <string-array name="category_array">
+        <item>Homework</item>
+        <item>Midterm</item>
+        <item>Final</item>
+        <item>Projects</item>
+        <item>Other</item>
+    </string-array>
+    
+     
+     <string name="my_subjects_title">My Subjects</string>
+	<string name="my_subjects_button_edit_description">Edit subjects of course</string>
+	<string name="my_subjects_edit_dialog_title">Choose subjects</string>
+    
+	<style name="ButtonText">
+       <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    
+	
+	    <string name="signOut">Sign Out</string>
+    <string name="developer">Developer: Jordan Kayse</string>
+    <string name="username_placeholder">Username</string>
+    <string name="password_placeholder">Password</string>
+    <string name="confirm_placeholder">Confirm Password</string>  
+    <string name="signIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
+    <string name="classes">Classes</string>
+    <string name="addClass">Add Class</string>
+    <string name="addGrading">Grading</string>
+    <string name="grading">Grading:</string>
+    <string name="addProfessor">Professor</string>
+    <string name="className">Class Name</string>
+    <string name="required">*</string>
+    <string name="submitClass">Submit</string>
+    <string name="cancelAdd">Cancel</string>
+    <string name="category">Category</string>
+    <string name="percentage">%</string>
+    <string name="addGrade">Add Grade</string>
+    <string name="deleteClass">Delete Class</string>
+    <string name="categoryName">Category</string>
+    <string name="score">100%</string>
+    <string name="grade">Assignment 1</string>
+    <string name="addGradeName">Assignment Name</string>
+    <string name="editGrade">Edit</string>
+    <string name="editGradeTitle">Edit Grade</string>
+    <string name="deleteGrade">Delete</string>
+     <string name="about">About</string>
+    <string name="addGradeButton">Submit</string>
+    <string name="cancelAddGrade">Cancel</string>
+    <string name="addGradeTitle">Add Grade</string>
+    <string name="outOf">/</string>
+    <string name="aboutText">Athena Grades is a general grade calculator. Just sign up and start adding classes!
+        To calculate the grade you need on a final, just add it. Then edit the grade and see what happens to the total grade.</string>
 </resources>

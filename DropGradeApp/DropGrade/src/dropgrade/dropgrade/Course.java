@@ -13,11 +13,14 @@ public class Course {
      */
 
     /**Attributes*/
-    private
+    
         String courseName;
+    	String courseSubject;
+    	Integer courseNum;
     	String professorFName;
     	String professorLName;
         Integer courseAverage;
+        String semsTaught;
         List<Weight> weights;
 
     public Course(){weights = new ArrayList<Weight>();}
@@ -28,6 +31,23 @@ public class Course {
 
     public void setCourseName(String courseName) {
         this.courseName = courseName;
+    }
+    
+    public void setCourseSubject(String subject){
+    	this.courseSubject = subject;
+    }
+    
+    public String getCourseSubject(){
+    	return courseSubject;
+    }
+    
+    public void setCourseNum(int num){
+    	this.courseNum = num;
+    	
+    }
+    
+    public Integer getCourseNum(){
+    	return courseNum;
     }
 
     public String getProfessorFName() {
@@ -45,6 +65,18 @@ public class Course {
     public void setCourseAverage(Integer courseAverage) {
         this.courseAverage = courseAverage;
     }
+    
+    public void setSemsTaught(String sem){
+    	this.semsTaught = sem;
+    }
+    
+    public String getSemsTaught(){
+    	return  semsTaught;
+    }
+    
+    public String getCourseInfo(){
+    	return courseSubject + courseNum.toString() + " " + courseName;
+    }
 
     public String getProfessorLName() {
         return professorLName;
@@ -53,7 +85,12 @@ public class Course {
     public void setProfessorLName(String professorLName) {
         this.professorLName = professorLName;
     }
+    
+    public String getProfessorName(){
+    	return professorLName + ", " + professorFName;
+    }
 
+    
     public List<Weight> getWeights() {
         return weights;
     }
@@ -90,6 +127,12 @@ public class Course {
 
     public void getGrades() {
         /**fix this */
+    }
+    
+    @Override
+    public String toString(){
+    	return "Course = " + courseName + ", Professor Name = " +
+    			professorFName + " "+ professorLName + ", semester = " +semsTaught;
     }
 
 }
