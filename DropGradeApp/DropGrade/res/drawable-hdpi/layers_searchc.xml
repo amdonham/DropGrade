@@ -4,7 +4,7 @@
         android:drawable="@drawable/button_schedule_gb"
         android:id="@+id/t_bg" />
     <item 
-        android:top="0dp" android:left="5dp">
+        android:top="0dp" android:left="3dp">
         <bitmap android:src="@drawable/books"
           android:gravity="left" />
     </item>

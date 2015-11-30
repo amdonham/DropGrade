@@ -42,7 +42,7 @@
        	        android:background="@drawable/layers_searchc"
        	        android:onClick="buttonOnClick"
        	        android:paddingBottom="10dp"
-       	        android:paddingLeft="30dp"
+       	        android:paddingLeft="35dp"
        	        android:paddingRight="10dp"
        	        android:paddingTop="10dp"
        	        android:text="Search Courses" />
@@ -55,7 +55,7 @@
        	        android:background="@drawable/layers_searchp"
        	        android:onClick="buttonOnClick"
        	        android:paddingBottom="10dp"
-       	        android:paddingLeft="40dp"
+       	        android:paddingLeft="45dp"
        	        android:paddingRight="10dp"
        	        android:paddingTop="10dp"
        	        android:text="Search Professors" />
@@ -95,6 +95,6 @@
     android:layout_alignParentTop="true"
     
     android:gravity="center"
-    android:src="@drawable/mainmenu" />
+    android:src="@drawable/welcomehome" />
 
 </RelativeLayout>
