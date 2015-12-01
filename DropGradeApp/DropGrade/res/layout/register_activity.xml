@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android='http://schemas.android.com/apk/res/android'
+    android:layout_width='fill_parent'
+    android:layout_height='fill_parent'
+    android:orientation='vertical'
+    android:padding='10sp' >
+    
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#999"/>
+    
+    <EditText
+        android:id='@+id/txt_fname'
+        android:layout_width='fill_parent'
+        android:inputType="textPersonName"
+        android:layout_height='wrap_content'
+        android:hint='First Name'
+        android:singleLine='true' >
+
+        <requestFocus />
+    </EditText>
+    
+        <EditText
+        android:id='@+id/txt_lname'
+        android:inputType="textPersonName"
+        android:layout_width='fill_parent'
+        android:layout_height='wrap_content'
+        android:hint='Last Name'
+        android:singleLine='true' >
+		
+        
+    </EditText>
+    
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width='fill_parent'
+        android:layout_height='wrap_content'
+        android:hint='Username'
+        android:singleLine='true' >
+
+        
+    </EditText>
+    
+        <EditText
+        android:id="@+id/editTextEmailID"
+        android:layout_width='fill_parent'
+        android:inputType="textEmailAddress"
+        android:layout_height='wrap_content'
+        android:hint='Email Address'
+        android:singleLine='true' >
+
+        
+    </EditText>
+
+    <EditText
+        android:id='@+id/password'
+        android:inputType="textPassword"
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Password' >
+    </EditText>
+    
+        <EditText
+        android:id='@+id/password2'
+        android:inputType="textPassword"
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:ems='10'
+        android:hint='Re-type Password' >
+    </EditText>
+    
+
+    <RelativeLayout
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content' >
+
+        <Button
+            android:id='@+id/btn_register'
+            android:layout_width='120dp'
+            android:layout_height='wrap_content'
+            android:text='Register' />
+
+        <Button
+            android:id='@+id/btn_cancel'
+            android:layout_width='120dp'
+            android:layout_height='wrap_content'
+            android:layout_alignParentTop='true'
+            android:layout_marginLeft='10dp'
+            android:layout_toRightOf='@+id/btn_register'
+            android:text='Cancel' />
+    </RelativeLayout>
+
+</LinearLayout>
