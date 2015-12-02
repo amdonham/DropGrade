@@ -1,8 +1,12 @@
 package dropgrade.dropgrade;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,13 +34,23 @@ public class CourseActivity extends Activity {
 	Button AddCourse;
 	final private static int DIALOG_LOGIN = 1;
 	final Context context = this;
+	LoginDataBaseAdapter loginDataBaseAdapter;
+	String UserID;
+	private ArrayAdapter<String> adapter;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_classes);
-
+//		CoursesDB = new CoursesDatabaseAdapter(this);
+//		CoursesDB = CoursesDB.open();
 		AddCourse = (Button) findViewById(R.id.addCButton);
-		
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+		    UserID = extras.getString("UID");
+		}
+		loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+		loginDataBaseAdapter=loginDataBaseAdapter.open();
 		ArrayList<Course> image_details = getCourseData();
 		final ListView lv1 = (ListView) findViewById(R.id.classList);
 		lv1.setAdapter(new CustomListAdapter(this, image_details));
@@ -45,81 +60,45 @@ public class CourseActivity extends Activity {
 			public void onItemClick(AdapterView<?> a, View v, int position, long id) {
 				Object o = lv1.getItemAtPosition(position);
 				Course newsData = (Course) o;
-				Toast.makeText(CourseActivity.this, "Selected :" + " " + newsData, Toast.LENGTH_LONG).show();
-				Intent intent = null;
-				if(newsData.courseName.equals("Finite Mathematics")){
-				intent = new Intent(getBaseContext(), CourseWorkActivity.class);	
-				}
-				if(intent != null)
-					startActivity(intent); 
+				Intent nextScreen = new Intent(v.getContext(),CourseWorkActivity.class);
+				nextScreen.putExtra("UID",UserID);
+				nextScreen.putExtra("courseName",newsData.getCourseName());
+				nextScreen.putExtra("courseDept",newsData.getCourseSubject());
+				nextScreen.putExtra("courseID",newsData.getCourseNum().toString());
+				startActivityForResult(nextScreen, 0);
 			}
 
 		});
-	
-		    
+		    //Add Course Button
 		    AddCourse.setOnClickListener(new OnClickListener(){
 
 				@Override
 				public void onClick(View v) {
-
 					showDialog(DIALOG_LOGIN);
-
 				}
-		    	
 		    });
-		    
 		}
-
-
-	
-
+////CID integer primary key autoincrement,"+ "CourseName text,"+ "DeptName text,"+ "UserID integer," + "Professor text"
 	private ArrayList<Course> getCourseData() {
 		ArrayList<Course> results = new ArrayList<Course>();
-		Course courseInfo = new Course();
-		courseInfo.setCourseName("Finite Mathematics");
-		courseInfo.setCourseSubject("MATH");
-		courseInfo.setCourseNum(110);
-		courseInfo.setProfessorFName("William");
-		courseInfo.setProfessorLName("McCurdy");
-		courseInfo.setSemsTaught("Fall 2015");
-		results.add(courseInfo);
+		ArrayList<String> courses = loginDataBaseAdapter.getAllCourseInfo(UserID);
+		for(int i = 0; i < courses.size(); i++){
+			Course courseInfo = new Course();
 
-		courseInfo = new Course();
-		courseInfo.setCourseName("Mircocomputer Applications");
-		courseInfo.setCourseSubject("CS");
-		courseInfo.setCourseNum(102);
-		courseInfo.setProfessorFName("Rebecca");
-		courseInfo.setProfessorLName("Odom-Bartel");
-		courseInfo.setSemsTaught("Fall 2015");
-		results.add(courseInfo);
-
-		courseInfo = new Course();
-		courseInfo.setCourseName("Web Site Design");
-		courseInfo.setCourseSubject("CS");
-		courseInfo.setCourseNum(205);
-		courseInfo.setProfessorFName("Dana");
-		courseInfo.setProfessorLName("Hooper");
-		courseInfo.setSemsTaught("Fall 2015");
-		results.add(courseInfo);
-
-		courseInfo = new Course();
-		courseInfo.setCourseName("Software Engineering");
-		courseInfo.setCourseSubject("CS");
-		courseInfo.setCourseNum(315);
-		courseInfo.setProfessorFName("Randy");
-		courseInfo.setProfessorLName("Smith");
-		courseInfo.setSemsTaught("Fall 2015");
-		results.add(courseInfo);
-
-		courseInfo = new Course();
-		courseInfo.setCourseName("EN101 ");
-		courseInfo.setCourseSubject("EN");
-		courseInfo.setCourseNum(101);
-		courseInfo.setProfessorFName("Anne");
-		courseInfo.setProfessorLName("Brettell");
-		courseInfo.setSemsTaught("Fall 2015");
-		results.add(courseInfo);
-
+			String[] splitCourse = courses.get(i).split(" ");
+			String id = splitCourse[0];
+			String name = splitCourse[1];
+			String dept = splitCourse[2];
+			String fprof = splitCourse[4];
+			
+			
+			courseInfo.setCourseName(name);
+			courseInfo.setCourseNum(Integer.parseInt(id));
+			courseInfo.setCourseSubject(dept);
+			courseInfo.setProfessorFName(fprof);
+			
+			results.add(courseInfo);
+		}
 		return results;
 	}
 	
@@ -152,33 +131,34 @@ public class CourseActivity extends Activity {
    
    final TextView text = (TextView) dialog.findViewById(R.id.text);
    text.setText("Enter new course information and press Submit!");
-   final EditText coursenam = (EditText) alertDialog
+   final EditText coursename = (EditText) alertDialog
      .findViewById(R.id.txt_name);
-   final EditText coursenum = (EditText) alertDialog
-     .findViewById(R.id.coursenum);
    final EditText coursesub = (EditText) alertDialog
 	.findViewById(R.id.coursesub);
-   final EditText professor = (EditText) alertDialog
-		   .findViewById(R.id.professor);
-   final EditText semester = (EditText) alertDialog
-		     .findViewById(R.id.semester);
+   final EditText professorf = (EditText) alertDialog
+	.findViewById(R.id.professsorf);
+   
+//   final EditText semester = (EditText) alertDialog
+//			.findViewById(R.id.semester);
 
    loginbutton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-     alertDialog.dismiss();
-     Toast.makeText(
-       CourseActivity.this,
-       
-       " Course Name : " + coursenam.getText().toString()
-         + "  Course Num : "
-         + coursenum.getText().toString() + "  Course Subject : "
-                 + coursesub.getText().toString()  + "  Professor : "
-                         + professor.getText().toString() + "  Semester : "
-                                 + semester.getText().toString(),
-       Toast.LENGTH_LONG).show();
+    	alertDialog.dismiss();
+     loginDataBaseAdapter.insertCourseEntry(
+    		 coursename.getText().toString(), 
+    		 coursesub.getText().toString(), 
+    		 UserID, 
+    		 professorf.getText().toString()
+    		 
+    		 );
+     
+     
+     finish();
+     startActivity(getIntent());
 
-    }
+	}
+    
 
    });
    cancelbutton.setOnClickListener(new View.OnClickListener() {

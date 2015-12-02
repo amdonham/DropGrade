@@ -111,6 +111,8 @@ public class GradeCalculatorActivity extends AppCompatActivity {
 
         needText = (EditText) findViewById(R.id.needText);
         needText.setFocusable(false);
+        
+        LinearLayout main = (LinearLayout) findViewById(R.id.main_view);
     }
     
     

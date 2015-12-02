@@ -6,6 +6,7 @@ public class CourseWork {
 	
 	String category;
 	Integer grade;
+	Integer weight;
 	ArrayList<CourseWork> assignments;
 	Integer count;
 	String name;
@@ -13,10 +14,12 @@ public class CourseWork {
 	public CourseWork(){
 	}
 	
-	public CourseWork(String category, int grade, String name ){
+	public CourseWork(String category, int grade, String name, int weight ){
 		this.category = category;
 		this.grade = grade;
 		this.name = name;
+		this.weight = weight;
+		
 	}
 	
 	public void setCategory( String category){
@@ -45,7 +48,14 @@ public class CourseWork {
 				
 	}
 	
+	public void setWeight(int weight){
+		this.weight = weight;
+	}
 	
+	public Integer getWeight(){
+		return weight;
+				
+	}
 	
 	
 	

@@ -37,7 +37,7 @@
             android:id="@+id/radioHomework"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Homework" 
+            android:text="Assignments" 
             android:checked="true" />
 
         <RadioButton
@@ -62,7 +62,13 @@
             android:id="@+id/radioOther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Other" />
+            android:text="Miscellaneous" />
+         
+         <RadioButton
+            android:id="@+id/radioQuizzes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quizzes" />
 
     </RadioGroup>
     

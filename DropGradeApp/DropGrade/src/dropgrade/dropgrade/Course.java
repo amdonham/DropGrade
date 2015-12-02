@@ -50,13 +50,8 @@ public class Course {
     	return courseNum;
     }
 
-    public String getProfessorFName() {
-        return professorFName;
-    }
 
-    public void setProfessorFName(String professorFName) {
-        this.professorFName = professorFName;
-    }
+
 
     public Integer getCourseAverage() {
         return courseAverage;
@@ -75,22 +70,28 @@ public class Course {
     }
     
     public String getCourseInfo(){
-    	return courseSubject + courseNum.toString() + " " + courseName;
+    	return courseSubject + " " + courseName;
     }
 
-    public String getProfessorLName() {
-        return professorLName;
+
+    public void setProfessorFName(String professorFName) {
+        this.professorFName = professorFName;
+    }
+    
+    public String getProfessorFName() {
+        return professorFName;
     }
 
     public void setProfessorLName(String professorLName) {
         this.professorLName = professorLName;
     }
+    public String getProfessorLName() {
+        return professorLName;
+    }
     
     public String getProfessorName(){
-    	return professorLName + ", " + professorFName;
+    	return professorFName;
     }
-
-    
     public List<Weight> getWeights() {
         return weights;
     }
@@ -132,7 +133,7 @@ public class Course {
     @Override
     public String toString(){
     	return "Course = " + courseName + ", Professor Name = " +
-    			professorFName + " "+ professorLName + ", semester = " +semsTaught;
+    			getProfessorName() + ", semester = " +semsTaught;
     }
 
 }

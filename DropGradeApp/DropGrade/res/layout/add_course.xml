@@ -20,15 +20,7 @@
 
         <requestFocus />
     </EditText>
-    
-    <EditText
-        android:id='@+id/coursenum'
-        android:layout_width='match_parent'
-        android:layout_height='wrap_content'
-        android:ems='10'
-        android:hint='Course Number' >
-    </EditText>
-    
+
     <EditText
         android:id='@+id/coursesub'
         android:layout_width='match_parent'
@@ -38,21 +30,14 @@
     </EditText>
 
     <EditText
-        android:id='@+id/professsor'
+        android:id='@+id/professsorf'
         android:layout_width='match_parent'
         android:layout_height='wrap_content'
         android:ems='10'
-        android:hint='Professor' >
+        android:hint='Professor Name' >
     </EditText>
     
-     <EditText
-        android:id='@+id/semester'
-        android:layout_width='match_parent'
-        android:layout_height='wrap_content'
-        android:ems='10'
-        android:hint='Semester' >
-    </EditText>
-
+ 
     <RelativeLayout
         android:layout_width='match_parent'
         android:layout_height='wrap_content' >

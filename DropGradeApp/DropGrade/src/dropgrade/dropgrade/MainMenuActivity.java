@@ -31,6 +31,7 @@ public class MainMenuActivity extends Activity {
 	Button searchp;
 	Button review;
 	Button whatif;
+	String UserID;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,10 @@ public class MainMenuActivity extends Activity {
 		searchp = (Button) findViewById(R.id.searchpb);
 		review = (Button) findViewById(R.id.reviewb);
 		whatif = (Button) findViewById(R.id.whatifb);
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+		    UserID = extras.getString("UID");
+		}
 
 	}
 	
@@ -50,6 +55,7 @@ public class MainMenuActivity extends Activity {
 	{
 		if (view == schedule){
 			Intent nextScreen = new Intent(view.getContext(),CourseActivity.class);
+			nextScreen.putExtra("UID",UserID);
 			startActivityForResult(nextScreen, 0);
 		}
 		
@@ -66,7 +72,7 @@ public class MainMenuActivity extends Activity {
 			startActivityForResult(nextScreen, 0);
         }
         else if (view == whatif){
-        	Intent nextScreen = new Intent(view.getContext(),GradeCalculatorActivity.class);
+        	Intent nextScreen = new Intent(view.getContext(),WhatIfGradeCalculator.class);
 			startActivityForResult(nextScreen, 0);
         }
      

@@ -37,14 +37,14 @@
             
         </activity>
         <activity android:name=".DisplayContact"/>
-      <activity android:name=".MainActivity"/>
+      <activity android:name=".WhatIfGradeCalculator"/>
       
         
         
  
        <activity
             android:name =".CourseWorkActivity"></activity>
-            
+            <activity android:name=".Calculator"></activity>
           <activity
             android:name =".CourseActivity"></activity>
           
@@ -76,7 +76,7 @@
       
         
         <activity
-            android:name= ".GradeCalculatorActivity">
+            android:name= ".WhatIfActivity">
             
         </activity>
         

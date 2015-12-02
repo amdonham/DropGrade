@@ -31,6 +31,16 @@
     <string name="title_activity_add_course">AddCourseActivity</string>
  <string name="image">image</string>
     <string name="title">Title</string>
+        <string-array name="criteria">
+        <item>--Select--</item>
+        <item>Midterm</item>
+        <item>Final</item>
+        <item>Quizzes</item>
+        <item>Assignments</item>
+        <item>Projects</item>
+        <item>Attendance</item>
+        <item>Miscellaneous</item>
+    </string-array>
     
     <string name="number">Number</string>
     <string name = "name">name</string>
