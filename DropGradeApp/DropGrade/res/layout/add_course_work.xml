@@ -37,8 +37,8 @@
             android:id="@+id/radioHomework"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Assignments" 
-            android:checked="true" />
+            android:checked="true"
+            android:text="Homework" />
 
         <RadioButton
             android:id="@+id/radioProject"

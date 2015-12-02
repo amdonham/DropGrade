@@ -29,7 +29,7 @@ public class SearchProfessorActivity extends AppCompatActivity {
 	private ListView lv;
 	
 	ArrayAdapter<String> adapter;
-	
+	LoginDataBaseAdapter loginDataBaseAdapter;
 	EditText inputSearch;
 	
 	ArrayList<HashMap<String, String>> professorList;
@@ -37,12 +37,14 @@ public class SearchProfessorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_professor_activity);
-
-        String professors[] = {"Alan Smith", "Betty Smith", "Monica Anderson", "Matthew Beagle", "David Cordes",
-                "Richard Borie", "Jeff Gray",
-                "Dana Hooper", "John Lusth", "Nicholas Kraft", "Yang Xiao", "Susan Vrbsky",
-                "Kimberly Wright", "Gregg Bell", "Sandra Bond", "Paul Brothers",
-                "Kathy Black"};
+        loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+		loginDataBaseAdapter=loginDataBaseAdapter.open();
+		ArrayList<String> professors = loginDataBaseAdapter.getAllProfessors();
+//        String professors[] = {"Alan Smith", "Betty Smith", "Monica Anderson", "Matthew Beagle", "David Cordes",
+//                "Richard Borie", "Jeff Gray",
+//                "Dana Hooper", "John Lusth", "Nicholas Kraft", "Yang Xiao", "Susan Vrbsky",
+//                "Kimberly Wright", "Gregg Bell", "Sandra Bond", "Paul Brothers",
+//                "Kathy Black"};
         
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);

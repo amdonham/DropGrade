@@ -10,7 +10,7 @@ public class DataBaseHelper extends SQLiteOpenHelper
 {
 	private static DataBaseHelper sInstance;
 	static final String DATABASE_NAME = "dropgrade.db";
-	static final int DATABASE_VERSION = 3;
+	static final int DATABASE_VERSION = 8;
 	public DataBaseHelper(Context context) 
 	{
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -20,6 +20,8 @@ public class DataBaseHelper extends SQLiteOpenHelper
 	{
 		_db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE_TABLE_USER);
 		_db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE_TABLE_COURSE);
+		_db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE_TABLE_ASSIGNMENT);
+		_db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE_TABLE_PROFESSOR);
 		
 	}
 	@Override
@@ -29,6 +31,8 @@ public class DataBaseHelper extends SQLiteOpenHelper
 		Log.w("TaskDBAdapter", "Upgrading from version " +_oldVersion + " to " +_newVersion + ", which will destroy all old data");
 		_db.execSQL("DROP TABLE IF EXISTS " + "USER");
 		_db.execSQL("DROP TABLE IF EXISTS " + "COURSE");
+		_db.execSQL("DROP TABLE IF EXISTS " + "ASSIGNMENT");
+		_db.execSQL("DROP TABLE IF EXISTS " + "PROFESSOR");
 		onCreate(_db);
 	}
 	public static synchronized DataBaseHelper getInstance(Context context) {

@@ -152,7 +152,7 @@ public class CourseActivity extends Activity {
     		 professorf.getText().toString()
     		 
     		 );
-     
+     loginDataBaseAdapter.insertProfessorEntry(professorf.getText().toString(), coursesub.getText().toString());
      
      finish();
      startActivity(getIntent());

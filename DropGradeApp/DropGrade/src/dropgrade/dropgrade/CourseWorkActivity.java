@@ -127,8 +127,7 @@ public class CourseWorkActivity extends AppCompatActivity {
 
 			@Override
 			public void onClick(View v) {
-				loginDataBaseAdapter.deleteCourseEntry(courseID);
-//				Toast.makeText(CourseWorkActivity.this, courseID, Toast.LENGTH_LONG).show();
+				loginDataBaseAdapter.deleteCourseEntry(courseID,UserID);
 				Intent nextScreen = new Intent(v.getContext(),CourseActivity.class);
 				nextScreen.putExtra("UID",UserID);
 				startActivityForResult(nextScreen, 0);
@@ -150,67 +149,30 @@ public class CourseWorkActivity extends AppCompatActivity {
         listHeader = new ArrayList<String>();
         listItems = new HashMap<String, List<CourseWork>>();
 
+        
         // A list of Headers. I've added the Headers as simple Strings.. However, you can also change them to Objects of POJO. The process which I've applied to the itemsList can also be applied here.
         listHeader.add("Homework");
         listHeader.add("Projects");
         listHeader.add("Midterm");
         listHeader.add("Final");
         listHeader.add("Other");
-
+        
         ArrayList<CourseWork> work = new ArrayList<CourseWork>();
-        CourseWork item = new CourseWork();
-        item.setCategory("Homework");
-        item.setName("Homework 1");
-        item.setGrade(100);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Homework");
-        item.setName("Homework 2");
-        item.setGrade(100);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Homework");
-        item.setName("Homework 3");
-        item.setGrade(100);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Homework");
-        item.setName("Homework 4");
-        item.setGrade(60);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Midterm");
-        item.setName("Midterm Exam");
-        item.setGrade(70);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Final");
-        item.setName("Final Exam");
-        item.setGrade(90);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Homework");
-        item.setName("Homework 5");
-        item.setGrade(70);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Projects");
-        item.setName("Group Project");
-        item.setGrade(85);
-        work.add(item);
-        
-        item = new CourseWork();
-        item.setCategory("Other");
-        item.setName("Attendance");
-        item.setGrade(100);
-        work.add(item);
+        ArrayList<String> grades = loginDataBaseAdapter.getAllGradeInfo(UserID,courseID);
+		for(int i = 0; i < grades.size(); i++){
+			CourseWork item = new CourseWork();
+			String[] splitInfo = grades.get(i).split(" ");
+			String AID = splitInfo[0];
+			String Name = splitInfo[1];
+			String Type = splitInfo[2];
+			Integer Grade = Integer.parseInt(splitInfo[3]);
+			Integer Weight = Integer.parseInt(splitInfo[4]);
+			item.setCategory(Type);
+			item.setName(Name);
+			item.setGrade(Grade);
+			item.setWeight(Weight);
+			work.add(item);
+		}
         
         List<CourseWork> homeworks = new ArrayList<CourseWork>();
         List<CourseWork> midterms = new ArrayList<CourseWork>();
@@ -292,16 +254,21 @@ public class CourseWorkActivity extends AppCompatActivity {
        public void onClick(View v) {
         alertDialog.dismiss();
         int selectedID = category.getCheckedRadioButtonId();
-        RadioButton categoryButton = (RadioButton) findViewById(selectedID);
-        Toast.makeText(
-          CourseWorkActivity.this,
-          
-          " Assignment Name : " + assignname.getText().toString()
-            + " Category : "
-            + categoryButton.getText().toString() + "  Assignment Grade : "
-                    + grade.getText().toString()  + "  Assignment Weight : "
-                            + assignweight.getText().toString(),
-          Toast.LENGTH_LONG).show();
+        View radioButton = category.findViewById(selectedID);
+        int radioId = category.indexOfChild(radioButton);
+        RadioButton btn = (RadioButton) category.getChildAt(radioId);
+        String selection = (String) btn.getText();
+        loginDataBaseAdapter.insertAssignmentEntry(
+       		 assignname.getText().toString(), 
+       		 selection , 
+       		 UserID, 
+       		 assignweight.getText().toString(),
+       		 grade.getText().toString(),
+       		 courseID
+       		 
+       		 );
+        finish();
+        startActivity(getIntent());
 
        }
 

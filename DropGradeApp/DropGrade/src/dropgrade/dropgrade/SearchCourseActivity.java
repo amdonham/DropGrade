@@ -16,7 +16,7 @@ import android.widget.ListView;
 public class SearchCourseActivity extends AppCompatActivity {
 	
 	private ListView lv;
-	
+	LoginDataBaseAdapter loginDataBaseAdapter;
 	ArrayAdapter<String> adapter;
 	
 	EditText inputSearch;
@@ -25,12 +25,14 @@ public class SearchCourseActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.search_course_activity);
-
-		String courses[] = {"CS 102 Mircocomputer Applications", "CS 104 The Science of Programming",
-				"CS 202 Introduction to the Information Highway", "CS 205 Web Site Design", 
-				"CS 260 Foundation of Computer Science", "CS 150 Programming I", "CS 250 Prgramming II",
-				"CS 350 Programming III C", "CS 350 Programming III C++", "CS 350 Programming III Java",
-				"CS 360 Data Structures and Allgorithms" };
+		loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+		loginDataBaseAdapter=loginDataBaseAdapter.open();
+		ArrayList<String> courses = loginDataBaseAdapter.getAllCourses();
+//		String courses[] = {"CS 102 Mircocomputer Applications", "CS 104 The Science of Programming",
+//				"CS 202 Introduction to the Information Highway", "CS 205 Web Site Design", 
+//				"CS 260 Foundation of Computer Science", "CS 150 Programming I", "CS 250 Prgramming II",
+//				"CS 350 Programming III C", "CS 350 Programming III C++", "CS 350 Programming III Java",
+//				"CS 360 Data Structures and Allgorithms" };
 		
 		lv = (ListView) findViewById(R.id.list_view2);
         inputSearch = (EditText) findViewById(R.id.inputSearch2);

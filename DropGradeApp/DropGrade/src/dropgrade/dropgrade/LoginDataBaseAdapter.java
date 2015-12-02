@@ -21,6 +21,11 @@ public class LoginDataBaseAdapter {
 	static final String DATABASE_CREATE_TABLE_COURSE = "CREATE TABLE "+"COURSE"+
 	"( " +"CID integer primary key autoincrement,"+ "CourseName text,"+ "DeptName text,"+ "UserID integer,"+ "Professor text"+")";
 	
+	static final String DATABASE_CREATE_TABLE_ASSIGNMENT = "CREATE TABLE "+"ASSIGNMENT"+
+			"( " +"AID integer primary key autoincrement,"+ "AssignmentName text,"+ "AssignmentType text,"+ "UserID text,"+ "CourseID text,"+ "Grade text,"+ "Weight text"+")";
+	
+	static final String DATABASE_CREATE_TABLE_PROFESSOR = "CREATE TABLE "+"PROFESSOR"+
+			"( " +"PID integer primary key autoincrement,"+ "Name text,"+ "Dept text"+")";
 	public  SQLiteDatabase db;
 	private final Context context;
 	private DataBaseHelper dbHelper;
@@ -148,9 +153,9 @@ public class LoginDataBaseAdapter {
 		db.insert("COURSE", null, newValues);
 	}
 
-	public void deleteCourseEntry(String CID)
+	public void deleteCourseEntry(String CID,String UserID)
 	{
-		 db.execSQL("delete from COURSE where CID='"+CID+"'");
+		 db.execSQL("delete from COURSE where CID='"+CID+"'" + " and UserID = '" + UserID + "'");
 	}	
 
 	public String getSinlgeCourseEntry(String CourseID)
@@ -182,7 +187,31 @@ public class LoginDataBaseAdapter {
 		db.update("COURSE",updatedValues, where, new String[]{CID});			   
 	}	
 
-
+	public Boolean courseNotAlreadyAdded(Cursor cursor, ArrayList<String> list){
+		for(int i = 0; i < list.size(); i ++){
+			if(list.get(i).equals(cursor.getString(0)+" "+cursor.getString(1)+" "+cursor.getString(2))){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public ArrayList<String> getAllCourses() {
+		ArrayList<String> wordList = new ArrayList<String>();
+		String selectQuery = "SELECT CourseName, Professor, DeptName FROM COURSE";
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		
+		if (cursor.moveToFirst()) {
+			
+			do {
+				if(courseNotAlreadyAdded(cursor,wordList)){ 
+					wordList.add(cursor.getString(0)+" "+cursor.getString(1)+" "+cursor.getString(2));
+				}
+			} while (cursor.moveToNext());
+			
+		}				    
+		return wordList;
+	}	
 
 	public ArrayList<String> getAllCourseInfo(String UserID) {
 		ArrayList<String> wordList = new ArrayList<String>();
@@ -198,6 +227,77 @@ public class LoginDataBaseAdapter {
 		}				    
 		return wordList;
 	}	
+
+
+	public ArrayList<String> getAllGradeInfo(String UserID,String CourseID) {
+		ArrayList<String> wordList = new ArrayList<String>();
+		String selectQuery = "SELECT * FROM ASSIGNMENT where UserID='"+UserID+"'"+" and CourseID='" +CourseID+ "'";
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		
+		if (cursor.moveToFirst()) {
+			
+			do {
+				wordList.add(cursor.getString(0)+" "+cursor.getString(1)+" "+cursor.getString(2)+ " " + cursor.getString(5) + " " + cursor.getString(6) );
+			} while (cursor.moveToNext());
+			
+		}				    
+		return wordList;
+	}	
+	public void insertAssignmentEntry(String AssignmentName, String Category, String UserID, String Weight,String Grade,String CourseID)
+	{
+		ContentValues newValues = new ContentValues();
+		newValues.put("UserID", UserID);
+		newValues.put("AssignmentName",AssignmentName);
+		newValues.put("AssignmentType", Category);
+		newValues.put("CourseID", CourseID);
+		newValues.put("Grade", Grade);
+		newValues.put("Weight", Weight);
+		db.insert("ASSIGNMENT", null, newValues);
+	}
+	
+	public Boolean professorNotAlreadyAdded(Cursor cursor, ArrayList<String> list){
+		for(int i = 0; i < list.size(); i ++){
+			if(list.get(i).equals(cursor.getString(0)+" "+cursor.getString(1))){
+				return false;
+			}
+		}
+		return true;
+	}
+	public Boolean professorNotAlreadyAdded(String profInfo, ArrayList<String> list){
+		for(int i = 0; i < list.size(); i ++){
+			if(list.get(i).equals(profInfo)){
+				return false;
+			}
+		}
+		return true;
+	}
+	public ArrayList<String> getAllProfessors() {
+		ArrayList<String> wordList = new ArrayList<String>();
+		String selectQuery = "SELECT Name, Dept FROM PROFESSOR";
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		
+		if (cursor.moveToFirst()) {
+			
+			do {
+				if(professorNotAlreadyAdded(cursor,wordList)){ 
+					wordList.add(cursor.getString(0)+" "+cursor.getString(1));
+				}
+			} while (cursor.moveToNext());
+			
+		}				    
+		return wordList;
+	}
+	
+	public void insertProfessorEntry(String Name, String Dept)
+	{
+		ContentValues newValues = new ContentValues();
+		newValues.put("Name", Name);
+		newValues.put("Dept",Dept);
+		
+		if(professorNotAlreadyAdded(Name + " " + Dept,this.getAllProfessors())){ 
+			db.insert("PROFESSOR", null, newValues);
+		}
+	}
 
 }
 
