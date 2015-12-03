@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -43,6 +44,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         final String itemTitle = (String) getChild(groupPosition, itemPosition).getName();
         final String itemNum = String.valueOf(getChild(groupPosition, itemPosition).getGrade());
+        final String id = String.valueOf(getChild(groupPosition, itemPosition).getID());
         
         
         if (convertView == null) {
@@ -55,7 +57,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         title.setText(itemTitle);
         TextView num = (TextView) convertView.findViewById(R.id.number);
         num.setText(itemNum);
-
+        TextView itemID = (TextView) convertView.findViewById(R.id.itemID);
+		itemID.setText(id);
         return convertView;
     }
 

@@ -10,6 +10,7 @@ public class CourseWork {
 	ArrayList<CourseWork> assignments;
 	Integer count;
 	String name;
+	String ID;
 	
 	public CourseWork(){
 	}
@@ -34,7 +35,12 @@ public class CourseWork {
 		this.name = name;
 		
 	}
-	
+	public void setID(String AID){
+		this.ID = AID;
+	}
+	public String getID(){
+		return ID;
+	}
 	public String getName(){
 		return name;
 	}

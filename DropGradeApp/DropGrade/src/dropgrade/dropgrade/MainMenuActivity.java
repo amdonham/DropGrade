@@ -65,10 +65,12 @@ public class MainMenuActivity extends Activity {
         }
         else if (view == searchp){
         	Intent nextScreen = new Intent(view.getContext(),SearchProfessorActivity.class);
+        	nextScreen.putExtra("UID",UserID);
 			startActivityForResult(nextScreen, 0);
         }
         else if (view == review){
         	Intent nextScreen = new Intent(view.getContext(),ReviewActivity.class);
+        	nextScreen.putExtra("UID",UserID);
 			startActivityForResult(nextScreen, 0);
         }
         else if (view == whatif){

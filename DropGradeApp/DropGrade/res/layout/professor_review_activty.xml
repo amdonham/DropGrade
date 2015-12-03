@@ -1,0 +1,127 @@
+
+ 
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv"
+        android:paddingTop ="5dp"
+        card_view:cardCornerRadius="4dp"
+    	card_view:cardBackgroundColor="#7e0000"
+    	card_view:cardElevation="10dp"
+        >
+        
+   
+ 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            >
+ 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/professor_name"
+                android:layout_alignParentTop="true"
+                android:paddingTop ="5dp"
+                android:paddingBottom ="5dp"
+                android:text="Professor Name: "
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                />
+            
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/p_name"
+                android:layout_toRightOf="@+id/professor_name"
+                android:paddingTop ="5dp"
+                android:paddingBottom ="5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+ 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/course_name"
+                android:text="Course Name: "
+                android:textColor="#FFFFFF"
+                android:paddingTop ="5dp"
+                android:paddingBottom ="5dp"
+                android:textSize="12sp"
+                
+                android:layout_below="@+id/professor_name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/c_name"
+                android:textColor="#FFFFFF"
+                android:layout_toRightOf="@+id/course_name"
+               android:paddingTop ="5dp"
+                android:paddingBottom ="5dp"
+                
+                android:layout_below="@+id/p_name"
+                android:textSize="12sp"
+                />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/professor_rating"
+                android:text="Rating: "
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:paddingTop ="5dp"
+                android:paddingBottom ="5dp"
+                android:layout_below="@+id/course_name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/p_rating"
+                android:layout_toRightOf="@+id/professor_rating"
+                android:paddingTop ="5dp"
+                android:paddingBottom ="5dp"
+               android:layout_below="@+id/c_name"
+               android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/professor_review"
+                android:text="Review: "
+                android:textSize="14sp"
+                android:paddingLeft ="10dp"
+                android:paddingTop ="5dp"
+                android:paddingBottom ="5dp"
+                android:layout_below="@+id/professor_rating"
+                android:textColor="#FFFFFF"
+                />
+            
+            <TextView
+        		android:id="@+id/p_review"
+        		android:layout_width="fill_parent"
+        		android:layout_height="60dp"
+        		android:layout_below="@+id/professor_review"
+        		android:inputType="textMultiLine"
+        		android:text="hey"
+        		android:lines="3"
+        		android:maxLines="6"
+        		android:minLines="4"
+        		android:textColor="#FFFFFF"
+        		android:textSize="12sp"
+        		android:paddingLeft="20dp"
+        		android:scrollbars="vertical" />
+            
+ 
+        </RelativeLayout>
+ 
+    </android.support.v7.widget.CardView>
+
+ 
+

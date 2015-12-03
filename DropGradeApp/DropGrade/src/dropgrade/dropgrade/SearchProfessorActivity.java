@@ -20,6 +20,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -31,26 +33,41 @@ public class SearchProfessorActivity extends AppCompatActivity {
 	ArrayAdapter<String> adapter;
 	LoginDataBaseAdapter loginDataBaseAdapter;
 	EditText inputSearch;
+	String UserID;
 	
 	ArrayList<HashMap<String, String>> professorList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+		    UserID = extras.getString("UID");
+		}
+		
         setContentView(R.layout.search_professor_activity);
         loginDataBaseAdapter = new LoginDataBaseAdapter(this);
 		loginDataBaseAdapter=loginDataBaseAdapter.open();
 		ArrayList<String> professors = loginDataBaseAdapter.getAllProfessors();
-//        String professors[] = {"Alan Smith", "Betty Smith", "Monica Anderson", "Matthew Beagle", "David Cordes",
-//                "Richard Borie", "Jeff Gray",
-//                "Dana Hooper", "John Lusth", "Nicholas Kraft", "Yang Xiao", "Susan Vrbsky",
-//                "Kimberly Wright", "Gregg Bell", "Sandra Bond", "Paul Brothers",
-//                "Kathy Black"};
-        
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
         
         adapter = new ArrayAdapter<String>(this, R.layout.professor_list, R.id.product_name, professors);
         lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new OnItemClickListener(){
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				int itemPosition = position;
+				String itemValue = (String) lv.getItemAtPosition(position);
+				Intent nextScreen = new Intent(view.getContext(),ProfessorReviewActivity.class);
+				nextScreen.putExtra("UID",UserID);
+				nextScreen.putExtra("PName",adapter.getItem(position).split(" - ")[0]);
+				startActivityForResult(nextScreen, 0);
+				
+			}
+        	
+        	
+        });
         
         /**
          * Enabling Search Filter

@@ -26,6 +26,9 @@ public class LoginDataBaseAdapter {
 	
 	static final String DATABASE_CREATE_TABLE_PROFESSOR = "CREATE TABLE "+"PROFESSOR"+
 			"( " +"PID integer primary key autoincrement,"+ "Name text,"+ "Dept text"+")";
+	static final String DATABASE_CREATE_TABLE_REVIEW = "CREATE TABLE "+"REVIEW"+
+			"( " +"RID integer primary key autoincrement,"+ "PID text,"+ "Review text,"+"Rating text,"+  "CourseName text,"+ "UserID text,"+ "PName text"+")";
+	
 	public  SQLiteDatabase db;
 	private final Context context;
 	private DataBaseHelper dbHelper;
@@ -196,6 +199,33 @@ public class LoginDataBaseAdapter {
 		return true;
 	}
 	
+	public Boolean courseNameNotAlreadyAdded(Cursor cursor, ArrayList<String> list){
+		for(int i = 0; i < list.size(); i ++){
+			if(list.get(i).equals(cursor.getString(0))){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public ArrayList<String> getAllCourseNames() {
+		ArrayList<String> wordList = new ArrayList<String>();
+		String selectQuery = "SELECT CourseName FROM COURSE";
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		
+		if (cursor.moveToFirst()) {
+			
+			do {
+				if(courseNameNotAlreadyAdded(cursor,wordList)){ 
+					wordList.add(cursor.getString(0));
+				}
+			} while (cursor.moveToNext());
+			
+		}				    
+		return wordList;
+	}	
+
+	
 	public ArrayList<String> getAllCourses() {
 		ArrayList<String> wordList = new ArrayList<String>();
 		String selectQuery = "SELECT CourseName, Professor, DeptName FROM COURSE";
@@ -221,7 +251,7 @@ public class LoginDataBaseAdapter {
 		if (cursor.moveToFirst()) {
 			
 			do {
-				wordList.add(cursor.getString(0)+" "+cursor.getString(1)+" "+cursor.getString(2)+ " " + cursor.getString(3) + " " + cursor.getString(4) );
+				wordList.add(cursor.getString(0)+"~"+cursor.getString(1)+"~"+cursor.getString(2)+ "~" + cursor.getString(3) + "~" + cursor.getString(4) );
 			} while (cursor.moveToNext());
 			
 		}				    
@@ -280,7 +310,7 @@ public class LoginDataBaseAdapter {
 			
 			do {
 				if(professorNotAlreadyAdded(cursor,wordList)){ 
-					wordList.add(cursor.getString(0)+" "+cursor.getString(1));
+					wordList.add(cursor.getString(0)+" - "+cursor.getString(1));
 				}
 			} while (cursor.moveToNext());
 			
@@ -298,6 +328,40 @@ public class LoginDataBaseAdapter {
 			db.insert("PROFESSOR", null, newValues);
 		}
 	}
+	public ArrayList<String> getAllReviews(String PName) {
+		ArrayList<String> wordList = new ArrayList<String>();
+		String selectQuery = "SELECT CourseName,Rating,Review,RID FROM REVIEW where PName='"+ PName +"'";
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		
+		if (cursor.moveToFirst()) {
+			
+			do {	
+					wordList.add(cursor.getString(0)+"~"+cursor.getString(1)+"~"+cursor.getString(2)+"~"+cursor.getString(3));
+			} while (cursor.moveToNext());
+			
+		}				    
+		return wordList;
+	}
+	
+	public void insertReview(String Review, String Rating, String CName, String PName,String UserID)
+	{
+		ContentValues newValues = new ContentValues();
+		newValues.put("Review",Review);
+		newValues.put("Rating",Rating);
+		newValues.put("CourseName",CName);
+		newValues.put("PName",PName);	
+		newValues.put("UserID",UserID);
+		db.insert("Review", null, newValues);
+		
+	}
+	public void deleteReview(String RID,String UserID)
+	{
+		 db.execSQL("delete from REVIEW where RID='"+RID+"'" + " and UserID = '" + UserID + "'");
+	}	
+	public void deleteAssignment(String AID)
+	{
+		 db.execSQL("delete from ASSIGNMENT where AID='"+AID+"'");
+	}	
 
 }
 

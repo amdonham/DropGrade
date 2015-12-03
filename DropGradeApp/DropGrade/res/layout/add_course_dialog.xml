@@ -6,7 +6,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/courseNameEntry" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
-            android:inputType="text" android:layout_toRightOf="@+id/textView" android:clickable="false"/>
+            android:inputType="text" android:layout_toRightOf="@+id/leaveReview" android:clickable="false"/>
     
     
     <TextView
@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Course Number"
-            android:id="@+id/textView2" android:layout_below="@+id/textView" android:layout_alignParentLeft="true"
+            android:id="@+id/textView2" android:layout_below="@+id/leaveReview" android:layout_alignParentLeft="true"
             android:layout_alignBottom="@+id/courseCreditsEntry"
             android:gravity="center"/>
     <EditText
@@ -52,7 +52,7 @@
             android:layout_alignParentRight="true"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/leaveReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/courseCreditsEntry"

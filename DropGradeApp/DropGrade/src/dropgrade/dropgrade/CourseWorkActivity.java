@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -35,7 +37,9 @@ public class CourseWorkActivity extends AppCompatActivity {
     String UserID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    	this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN); 
+
+    	super.onCreate(savedInstanceState);
         setContentView(R.layout.course_work_activity);
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
@@ -101,15 +105,23 @@ public class CourseWorkActivity extends AppCompatActivity {
 
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int itemPosition, long id) {
-                Toast.makeText(
-                        getApplicationContext(),
-                        listHeader.get(groupPosition)
-                                + " : "
-                                + listItems.get(
-                                listHeader.get(groupPosition)).get(
-                                itemPosition).getName(), Toast.LENGTH_SHORT)
-                        .show();
+                                        final int groupPosition, final int itemPosition, long id) {
+                ImageView delete = (ImageView)findViewById(R.id.imageView);
+                delete.setOnClickListener(new View.OnClickListener() {
+                	  @Override
+                	  public void onClick(View view) {
+                		
+						String theID = listItems.get(listHeader.get(groupPosition)).get(itemPosition).getID();
+						TextView itemID = (TextView) findViewById(R.id.itemID);
+                		loginDataBaseAdapter.deleteAssignment(itemID.getText().toString());
+                      	finish();
+                	    startActivity(getIntent());
+                	    
+                		  
+                	  }
+                	  
+
+                });
                 return false;
             }
         });
@@ -171,6 +183,7 @@ public class CourseWorkActivity extends AppCompatActivity {
 			item.setName(Name);
 			item.setGrade(Grade);
 			item.setWeight(Weight);
+			item.setID(AID);
 			work.add(item);
 		}
         
@@ -207,9 +220,44 @@ public class CourseWorkActivity extends AppCompatActivity {
         listItems.put(listHeader.get(2), midterms);
         listItems.put(listHeader.get(3), finals);
         listItems.put(listHeader.get(4), other);
+        
+        float homeworksTotal = 0;
+        float projectsTotal = 0;
+        float midtermsTotal = 0;
+        float finalsTotal = 0;
+        float otherTotal = 0;
 
-        }
+        
+	    for(int i = 0; i < homeworks.size(); i++){
+	    	homeworksTotal += homeworks.get(i).getGrade() * homeworks.get(i).getWeight()/100;
+	    }
+	    if(homeworks.size() > 0){homeworksTotal/=homeworks.size();}
+	    
+		for(int i = 0; i < projects.size(); i++){
+			projectsTotal += projects.get(i).getGrade() * projects.get(i).getWeight()/100;    	
+		}
+		if(projects.size() > 0){projectsTotal/=projects.size();}
+		
+		for(int i = 0; i < midterms.size(); i++){
+			midtermsTotal += midterms.get(i).getGrade() * midterms.get(i).getWeight()/100;
+		}
+		if(midterms.size() > 0){midtermsTotal/=midterms.size();}
+		
+		for(int i = 0; i < finals.size(); i++){
+			finalsTotal += finals.get(i).getGrade() * finals.get(i).getWeight()/100;
+		}
+		if(finals.size() > 0){finalsTotal/=finals.size();}
+		
+		for(int i = 0; i < other.size(); i++){
+			otherTotal += other.get(i).getGrade() * other.get(i).getWeight()/100;
+		}
+		if(other.size() > 0){otherTotal/=other.size();}
+        
     
+    	float totalGrade = homeworksTotal+projectsTotal+midtermsTotal+finalsTotal+otherTotal;
+    	TextView text = (TextView) findViewById(R.id.finalGradeInput);
+    	text.setText(Float.toString(totalGrade) + "%");
+    }
     @Override
     protected Dialog onCreateDialog(int id) {
      AlertDialog dialogDetails = null;
@@ -258,17 +306,20 @@ public class CourseWorkActivity extends AppCompatActivity {
         int radioId = category.indexOfChild(radioButton);
         RadioButton btn = (RadioButton) category.getChildAt(radioId);
         String selection = (String) btn.getText();
-        loginDataBaseAdapter.insertAssignmentEntry(
-       		 assignname.getText().toString(), 
-       		 selection , 
-       		 UserID, 
-       		 assignweight.getText().toString(),
-       		 grade.getText().toString(),
-       		 courseID
-       		 
-       		 );
+        if(assignname.getText().length() > 0 && assignweight.getText().length() > 0 && grade.getText().length() > 0){
+	        loginDataBaseAdapter.insertAssignmentEntry(
+	       		 assignname.getText().toString(), 
+	       		 selection , 
+	       		 UserID, 
+	       		 assignweight.getText().toString(),
+	       		 grade.getText().toString(),
+	       		 courseID
+	       		 
+	       		 );
+
         finish();
         startActivity(getIntent());
+        }
 
        }
 

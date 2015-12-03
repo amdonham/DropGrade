@@ -40,6 +40,7 @@ public class CourseActivity extends Activity {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_classes);
 //		CoursesDB = new CoursesDatabaseAdapter(this);
@@ -55,6 +56,7 @@ public class CourseActivity extends Activity {
 		final ListView lv1 = (ListView) findViewById(R.id.classList);
 		lv1.setAdapter(new CustomListAdapter(this, image_details));
 		lv1.setOnItemClickListener(new OnItemClickListener() {
+
 
 			@Override
 			public void onItemClick(AdapterView<?> a, View v, int position, long id) {
@@ -85,12 +87,11 @@ public class CourseActivity extends Activity {
 		for(int i = 0; i < courses.size(); i++){
 			Course courseInfo = new Course();
 
-			String[] splitCourse = courses.get(i).split(" ");
+			String[] splitCourse = courses.get(i).split("~");
 			String id = splitCourse[0];
 			String name = splitCourse[1];
 			String dept = splitCourse[2];
 			String fprof = splitCourse[4];
-			
 			
 			courseInfo.setCourseName(name);
 			courseInfo.setCourseNum(Integer.parseInt(id));
@@ -145,14 +146,15 @@ public class CourseActivity extends Activity {
     @Override
     public void onClick(View v) {
     	alertDialog.dismiss();
-     loginDataBaseAdapter.insertCourseEntry(
-    		 coursename.getText().toString(), 
-    		 coursesub.getText().toString(), 
-    		 UserID, 
-    		 professorf.getText().toString()
-    		 
-    		 );
-     loginDataBaseAdapter.insertProfessorEntry(professorf.getText().toString(), coursesub.getText().toString());
+	    if(coursename.getText().length() > 0 && coursesub.getText().length() > 0 && professorf.getText().length() > 0){
+	     loginDataBaseAdapter.insertCourseEntry(
+	    		 coursename.getText().toString(), 
+	    		 coursesub.getText().toString(), 
+	    		 UserID, 
+	    		 professorf.getText().toString()
+	    		 );
+	     loginDataBaseAdapter.insertProfessorEntry(professorf.getText().toString(), coursesub.getText().toString());
+	    }
      
      finish();
      startActivity(getIntent());

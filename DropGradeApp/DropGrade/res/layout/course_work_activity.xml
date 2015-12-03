@@ -50,15 +50,38 @@
 
             <ExpandableListView
                 android:id="@+id/listView10"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:groupIndicator="@drawable/group_indicator"
+                android:layout_height="449dp"
                 android:cacheColorHint="#00000000"
                 android:divider="#ffff1200"
-                />
-            
-                      
-            
-       
+                android:groupIndicator="@drawable/group_indicator" />
+			
+			<RelativeLayout
+				android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            >
+            <EditText
+                android:id="@+id/finalGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="Final Average:  "
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
+			<EditText
+			    android:id="@+id/finalGradeInput"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_alignParentTop="true"
+			    android:layout_marginRight="96dp"
+			    android:ems="10"
+			    android:textSize="26sp"
+			    android:textStyle="bold" >
+
+			    <requestFocus />
+			</EditText>
+
+			</RelativeLayout>
 </LinearLayout>
